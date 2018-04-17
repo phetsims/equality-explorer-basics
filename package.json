@@ -21,6 +21,7 @@
       "vibe"
     ],
     "runnable": true,
+    "simulation": true,
     "supportedBrands": [
       "phet",
       "adapted-from-phet"
