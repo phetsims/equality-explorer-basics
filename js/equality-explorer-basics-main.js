@@ -10,26 +10,17 @@ define( function( require ) {
 
   // modules
   var BasicsScreen = require( 'EQUALITY_EXPLORER/basics/BasicsScreen' );
+  var EqualityExplorerConstants = require( 'EQUALITY_EXPLORER/common/EqualityExplorerConstants' );
   var Sim = require( 'JOIST/Sim' );
   var SimLauncher = require( 'JOIST/SimLauncher' );
 
   // strings
   var equalityExplorerBasicsTitleString = require( 'string!EQUALITY_EXPLORER_BASICS/equality-explorer-basics.title' );
 
-  //TODO fill in credits, https://github.com/phetsims/equality-explorer-basics/issues/2
-  var options = {
-    credits: {
-      leadDesign: 'Amanda McGarry',
-      softwareDevelopment: 'Chris Malley (PixelZoom, Inc.)',
-      team: 'Diana Berenice L\u00f3pez Tavares, Ariel Paul, Kathy Perkins, Argenta Price, Beth Stade, David Webb',
-      qualityAssurance: '',
-      graphicArts: 'Mariah Hermsmeyer, Cheryl McCutchan',
-      thanks: ''
-    }
-  };
-
   SimLauncher.launch( function() {
-    var sim = new Sim( equalityExplorerBasicsTitleString, [ new BasicsScreen() ], options );
+    var sim = new Sim( equalityExplorerBasicsTitleString, [ new BasicsScreen() ], {
+      credits: EqualityExplorerConstants.CREDITS
+    } );
     sim.start();
   } );
 } );
