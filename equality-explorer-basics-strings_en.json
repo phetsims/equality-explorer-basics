@@ -1,5 +1,11 @@
 {
   "equality-explorer-basics.title": {
     "value": "Equality Explorer: Basics"
+  },
+  "screen.lab": {
+    "value": "Lab"
+  },
+  "weights": {
+    "value": "Weights"
   }
 }

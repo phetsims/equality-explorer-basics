@@ -11,6 +11,7 @@ define( function( require ) {
   // modules
   var BasicsScreen = require( 'EQUALITY_EXPLORER/basics/BasicsScreen' );
   var EqualityExplorerConstants = require( 'EQUALITY_EXPLORER/common/EqualityExplorerConstants' );
+  var LabScreen = require( 'EQUALITY_EXPLORER_BASICS/lab/LabScreen' );
   var Sim = require( 'JOIST/Sim' );
   var SimLauncher = require( 'JOIST/SimLauncher' );
 
@@ -18,7 +19,7 @@ define( function( require ) {
   var equalityExplorerBasicsTitleString = require( 'string!EQUALITY_EXPLORER_BASICS/equality-explorer-basics.title' );
 
   SimLauncher.launch( function() {
-    var sim = new Sim( equalityExplorerBasicsTitleString, [ new BasicsScreen() ], {
+    var sim = new Sim( equalityExplorerBasicsTitleString, [ new BasicsScreen(), new LabScreen() ], {
       credits: EqualityExplorerConstants.CREDITS
     } );
     sim.start();
