@@ -44,7 +44,6 @@ define( function( require ) {
       fontSize: 24,
 
       // supertype options
-      showTitleWhenExpanded: false,
       contentXMargin: 20,
       contentYMargin: 10
 
@@ -75,7 +74,7 @@ define( function( require ) {
       } );
 
       // NumberPicker.dispose not needed
-      var valuePicker = new NumberPicker( new Property( mysteryObject.weight ), new Property( WEIGHT_RANGE ), {
+      var valuePicker = new NumberPicker( mysteryObject.weightProperty, new Property( WEIGHT_RANGE ), {
         color: 'black',
         font: new PhetFont( options.fontSize ),
         xMargin: 6,

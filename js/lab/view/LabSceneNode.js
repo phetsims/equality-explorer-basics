@@ -54,7 +54,6 @@ define( function( require ) {
      */
     reset: function() {
       this.weightsAccordionBoxExpandedProperty.reset();
-      this.variableValuesVisibleProperty.reset();
       BasicsSceneNode.prototype.reset.call( this );
     }
   } );

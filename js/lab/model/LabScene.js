@@ -37,7 +37,8 @@ define( function( require ) {
     ];
 
     BasicsScene.call( this, this.mysteryObjects, {
-      debugName: 'lab'
+      debugName: 'lab',
+      numberOfSnapshots: 4
     } );
   }
 
