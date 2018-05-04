@@ -17,6 +17,7 @@ define( function( require ) {
   var Image = require( 'SCENERY/nodes/Image' );
   var inherit = require( 'PHET_CORE/inherit' );
   var MathSymbols = require( 'SCENERY_PHET/MathSymbols' );
+  var MysteryObject = require( 'EQUALITY_EXPLORER/basics/model/MysteryObject' );
   var Node = require( 'SCENERY/nodes/Node' );
   var NumberPicker = require( 'SCENERY_PHET/NumberPicker' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
@@ -28,7 +29,8 @@ define( function( require ) {
   var weightsString = require( 'string!EQUALITY_EXPLORER_BASICS/weights' );
 
   // constants
-  var WEIGHT_RANGE = new Range( 1, 10 ); //TODO #2 each MysteryObject should have an associated weightRange
+  //TODO #2 each MysteryObject should have an associated weightRange, and/or this should move to model
+  var WEIGHT_RANGE = new Range( 1, 10 );
 
   /**
    * @param {MysteryObject[]} mysteryObjects
@@ -64,6 +66,7 @@ define( function( require ) {
 
     var children = [];
     mysteryObjects.forEach( function( mysteryObject ) {
+      assert && assert( mysteryObject instanceof MysteryObject, 'invalid mysteryObject: ' + mysteryObject );
 
       var icon = new Image( mysteryObject.image, {
         maxHeight: EqualityExplorerConstants.SMALL_TERM_DIAMETER
