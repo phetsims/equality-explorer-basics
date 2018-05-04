@@ -1,7 +1,7 @@
 // Copyright 2018, University of Colorado Boulder
 
 /**
- * Accordion box that allows the student to modify the weights of mystery objects.
+ * Accordion box that allows the student to modify the weights of object types.
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
@@ -17,9 +17,9 @@ define( function( require ) {
   var Image = require( 'SCENERY/nodes/Image' );
   var inherit = require( 'PHET_CORE/inherit' );
   var MathSymbols = require( 'SCENERY_PHET/MathSymbols' );
-  var MysteryObject = require( 'EQUALITY_EXPLORER/basics/model/MysteryObject' );
   var Node = require( 'SCENERY/nodes/Node' );
   var NumberPicker = require( 'SCENERY_PHET/NumberPicker' );
+  var ObjectType = require( 'EQUALITY_EXPLORER/basics/model/ObjectType' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var Property = require( 'AXON/Property' );
   var Range = require( 'DOT/Range' );
@@ -29,15 +29,15 @@ define( function( require ) {
   var weightsString = require( 'string!EQUALITY_EXPLORER_BASICS/weights' );
 
   // constants
-  //TODO #2 each MysteryObject should have an associated weightRange, and/or this should move to model
+  //TODO #2 each ObjectType should have an associated weightRange, and/or this should move to model
   var WEIGHT_RANGE = new Range( 1, 10 );
 
   /**
-   * @param {MysteryObject[]} mysteryObjects
+   * @param {ObjectType[]} objectTypes
    * @param {Object} [options]
    * @constructor
    */
-  function WeightsAccordionBox( mysteryObjects, options ) {
+  function WeightsAccordionBox( objectTypes, options ) {
 
     options = _.extend( {}, EqualityExplorerConstants.ACCORDION_BOX_OPTIONS, {
 
@@ -65,11 +65,11 @@ define( function( require ) {
     var strut = new HStrut( contentWidth );
 
     var children = [];
-    mysteryObjects.forEach( function( mysteryObject ) {
-      assert && assert( mysteryObject instanceof MysteryObject, 'invalid mysteryObject: ' + mysteryObject );
-      assert && assert( mysteryObject.weightProperty, 'mysteryObject is missing weightProperty: ' + mysteryObject );
+    objectTypes.forEach( function( objectType ) {
+      assert && assert( objectType instanceof ObjectType, 'invalid objectType: ' + objectType );
+      assert && assert( objectType.weightProperty, 'objectType is missing weightProperty: ' + objectType );
 
-      var icon = new Image( mysteryObject.image, {
+      var icon = new Image( objectType.image, {
         maxHeight: EqualityExplorerConstants.SMALL_TERM_DIAMETER
       } );
 
@@ -78,7 +78,7 @@ define( function( require ) {
       } );
 
       // NumberPicker.dispose not needed
-      var valuePicker = new NumberPicker( mysteryObject.weightProperty, new Property( WEIGHT_RANGE ), {
+      var valuePicker = new NumberPicker( objectType.weightProperty, new Property( WEIGHT_RANGE ), {
         color: 'black',
         font: new PhetFont( options.fontSize ),
         xMargin: 6,

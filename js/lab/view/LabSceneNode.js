@@ -2,7 +2,7 @@
 
 /**
  * View of a scene in the 'Lab' screen.
- * Same as the 'Basics' screen, but with controls for changing the weight of mystery objects.
+ * Same as the 'Basics' screen, but with controls for changing the weight of object types.
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
@@ -35,7 +35,7 @@ define( function( require ) {
     BasicsSceneNode.call( this, scene, sceneProperty, layoutBounds, options );
 
     // Weights accordion box, below the Snapshots accordion box
-    var weightsAccordionBox = new WeightsAccordionBox( scene.mysteryObjects, {
+    var weightsAccordionBox = new WeightsAccordionBox( scene.objectTypes, {
       expandedProperty: this.weightsAccordionBoxExpandedProperty,
       fixedWidth: this.snapshotsAccordionBox.width, // same width as Snapshots
       right: this.snapshotsAccordionBox.right,

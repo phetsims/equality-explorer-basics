@@ -12,7 +12,7 @@ define( function( require ) {
   var BasicsScene = require( 'EQUALITY_EXPLORER/basics/model/BasicsScene' );
   var equalityExplorerBasics = require( 'EQUALITY_EXPLORER_BASICS/equalityExplorerBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var MysteryObject = require( 'EQUALITY_EXPLORER/basics/model/MysteryObject' );
+  var ObjectType = require( 'EQUALITY_EXPLORER/basics/model/ObjectType' );
 
   // images
   var appleImage = require( 'image!EQUALITY_EXPLORER/apple.png' );
@@ -27,16 +27,15 @@ define( function( require ) {
    */
   function LabScene() {
 
-    // mystery objects for this scene
-    var mysteryObjects = [
+    var objectTypes = [
 
-      // name, weight, image, shadow
-      new MysteryObject( 'apple', 4, appleImage, appleShadowImage ),
-      new MysteryObject( 'lemon', 5, lemonImage, lemonShadowImage ),
-      new MysteryObject( 'orange', 2, orangeImage, orangeShadowImage )
+      // name, image, shadow, weight
+      new ObjectType( 'apple', appleImage, appleShadowImage, 4 ),
+      new ObjectType( 'lemon', lemonImage, lemonShadowImage, 5 ),
+      new ObjectType( 'orange', orangeImage, orangeShadowImage, 2 )
     ];
 
-    BasicsScene.call( this, mysteryObjects, {
+    BasicsScene.call( this, objectTypes, {
       debugName: 'lab',
       numberOfSnapshots: 4
     } );
