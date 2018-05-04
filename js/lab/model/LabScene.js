@@ -27,8 +27,8 @@ define( function( require ) {
    */
   function LabScene() {
 
-    // @public mystery objects for this scene
-    this.mysteryObjects = [
+    // mystery objects for this scene
+    var mysteryObjects = [
 
       // name, weight, image, shadow
       new MysteryObject( 'apple', 4, appleImage, appleShadowImage ),
@@ -36,7 +36,7 @@ define( function( require ) {
       new MysteryObject( 'orange', 2, orangeImage, orangeShadowImage )
     ];
 
-    BasicsScene.call( this, this.mysteryObjects, {
+    BasicsScene.call( this, mysteryObjects, {
       debugName: 'lab',
       numberOfSnapshots: 4
     } );
