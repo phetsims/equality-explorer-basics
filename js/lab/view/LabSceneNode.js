@@ -42,6 +42,7 @@ define( function( require ) {
       top: this.snapshotsAccordionBox.bottom + 15
     } );
     this.addChild( weightsAccordionBox );
+    weightsAccordionBox.moveToBack();
   }
 
   equalityExplorerBasics.register( 'LabSceneNode', LabSceneNode );
