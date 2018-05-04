@@ -67,6 +67,7 @@ define( function( require ) {
     var children = [];
     mysteryObjects.forEach( function( mysteryObject ) {
       assert && assert( mysteryObject instanceof MysteryObject, 'invalid mysteryObject: ' + mysteryObject );
+      assert && assert( mysteryObject.weightProperty, 'mysteryObject is missing weightProperty: ' + mysteryObject );
 
       var icon = new Image( mysteryObject.image, {
         maxHeight: EqualityExplorerConstants.SMALL_TERM_DIAMETER
