@@ -30,9 +30,9 @@ define( function( require ) {
     var objectTypes = [
 
       // name, image, shadow, weight
-      new ObjectType( 'apple', appleImage, appleShadowImage, 4 ),
-      new ObjectType( 'lemon', lemonImage, lemonShadowImage, 5 ),
-      new ObjectType( 'orange', orangeImage, orangeShadowImage, 2 )
+      new ObjectType( 'apple', appleImage, appleShadowImage, 1 ),
+      new ObjectType( 'lemon', lemonImage, lemonShadowImage, 1 ),
+      new ObjectType( 'orange', orangeImage, orangeShadowImage, 1 )
     ];
 
     BasicsScene.call( this, objectTypes, {
