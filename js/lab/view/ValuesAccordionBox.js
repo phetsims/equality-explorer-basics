@@ -1,7 +1,7 @@
 // Copyright 2018, University of Colorado Boulder
 
 /**
- * Accordion box that allows the student to modify the weights of object types.
+ * Accordion box that allows the student to modify the weights (values) of object types.
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
@@ -25,14 +25,14 @@ define( function( require ) {
   var Text = require( 'SCENERY/nodes/Text' );
 
   // strings
-  var weightsString = require( 'string!EQUALITY_EXPLORER_BASICS/weights' );
+  var valuesString = require( 'string!EQUALITY_EXPLORER_BASICS/values' );
 
   /**
    * @param {ObjectType[]} objectTypes
    * @param {Object} [options]
    * @constructor
    */
-  function WeightsAccordionBox( objectTypes, options ) {
+  function ValuesAccordionBox( objectTypes, options ) {
 
     options = _.extend( {}, EqualityExplorerConstants.ACCORDION_BOX_OPTIONS, {
 
@@ -46,13 +46,13 @@ define( function( require ) {
 
     }, options );
 
-    assert && assert( options.maxWidth === undefined, 'WeightsAccordionBox sets maxWidth' );
+    assert && assert( options.maxWidth === undefined, 'ValuesAccordionBox sets maxWidth' );
     options.maxWidth = options.fixedWidth;
 
     var contentWidth = options.fixedWidth - ( 2 * options.contentXMargin );
 
-    assert && assert( !options.titleNode, 'WeightsAccordionBox sets titleNode' );
-    options.titleNode = new Text( weightsString, {
+    assert && assert( !options.titleNode, 'ValuesAccordionBox sets titleNode' );
+    options.titleNode = new Text( valuesString, {
       font: EqualityExplorerConstants.ACCORDION_BOX_TITLE_FONT,
       maxWidth: 0.85 * contentWidth
     } );
@@ -103,7 +103,7 @@ define( function( require ) {
     AccordionBox.call( this, contentNode, options );
   }
 
-  equalityExplorerBasics.register( 'WeightsAccordionBox', WeightsAccordionBox );
+  equalityExplorerBasics.register( 'ValuesAccordionBox', ValuesAccordionBox );
 
-  return inherit( AccordionBox, WeightsAccordionBox );
+  return inherit( AccordionBox, ValuesAccordionBox );
 } );
