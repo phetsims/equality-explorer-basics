@@ -22,15 +22,10 @@ define( function( require ) {
   var ObjectType = require( 'EQUALITY_EXPLORER/basics/model/ObjectType' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var Property = require( 'AXON/Property' );
-  var Range = require( 'DOT/Range' );
   var Text = require( 'SCENERY/nodes/Text' );
 
   // strings
   var weightsString = require( 'string!EQUALITY_EXPLORER_BASICS/weights' );
-
-  // constants
-  //TODO #2 each ObjectType should have an associated weightRange, and/or this should move to model
-  var WEIGHT_RANGE = new Range( 1, 10 );
 
   /**
    * @param {ObjectType[]} objectTypes
@@ -78,7 +73,7 @@ define( function( require ) {
       } );
 
       // NumberPicker.dispose not needed
-      var valuePicker = new NumberPicker( objectType.weightProperty, new Property( WEIGHT_RANGE ), {
+      var valuePicker = new NumberPicker( objectType.weightProperty, new Property( objectType.weightRange ), {
         color: 'black',
         font: new PhetFont( options.fontSize ),
         xMargin: 6,
