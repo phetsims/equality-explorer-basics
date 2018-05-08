@@ -2,7 +2,7 @@
 
 /**
  * View of a scene in the 'Lab' screen.
- * Same as the 'Basics' screen, but with controls for changing the weight of object types.
+ * Same as the 'Basics' screen, but with controls for changing the values (weights) of object types.
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
