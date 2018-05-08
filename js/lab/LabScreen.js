@@ -11,9 +11,9 @@ define( function( require ) {
   // modules
   var equalityExplorerBasics = require( 'EQUALITY_EXPLORER_BASICS/equalityExplorerBasics' );
   var EqualityExplorerColors = require( 'EQUALITY_EXPLORER/common/EqualityExplorerColors' );
+  var EqualityExplorerScreen = require( 'EQUALITY_EXPLORER/common/EqualityExplorerScreen' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Property = require( 'AXON/Property' );
-  var Screen = require( 'JOIST/Screen' );
   var LabModel = require( 'EQUALITY_EXPLORER_BASICS/lab/model/LabModel' );
   var LabScreenView = require( 'EQUALITY_EXPLORER_BASICS/lab/view/LabScreenView' );
 
@@ -32,7 +32,7 @@ define( function( require ) {
       //TODO homeScreenIcon
     }, options );
 
-    Screen.call( this,
+    EqualityExplorerScreen.call( this,
       function() { return new LabModel(); },
       function( model ) { return new LabScreenView( model ); },
       options
@@ -41,5 +41,5 @@ define( function( require ) {
 
   equalityExplorerBasics.register( 'LabScreen', LabScreen );
 
-  return inherit( Screen, LabScreen );
+  return inherit( EqualityExplorerScreen, LabScreen );
 } );
