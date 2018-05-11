@@ -14,7 +14,10 @@ define( function( require ) {
   var BooleanProperty = require( 'AXON/BooleanProperty' );
   var equalityExplorerBasics = require( 'EQUALITY_EXPLORER_BASICS/equalityExplorerBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var ValuesAccordionBox = require( 'EQUALITY_EXPLORER_BASICS/lab/view/ValuesAccordionBox' );
+  var VariablesAccordionBox = require( 'EQUALITY_EXPLORER/common/view/VariablesAccordionBox' );
+
+  // strings
+  var valuesString = require( 'string!EQUALITY_EXPLORER_BASICS/values' );
 
   /**
    * @param {LabScene} scene
@@ -34,8 +37,10 @@ define( function( require ) {
 
     BasicsSceneNode.call( this, scene, sceneProperty, layoutBounds, options );
 
-    // Weights accordion box, below the Snapshots accordion box
-    var valuesAccordionBox = new ValuesAccordionBox( scene.variables, {
+    // Values accordion box, below the Snapshots accordion box
+    var valuesAccordionBox = new VariablesAccordionBox( scene.variables, {
+      titleString: valuesString,
+      showTitleWhenExpanded: true,
       expandedProperty: this.valuesAccordionBoxExpandedProperty,
       fixedWidth: this.snapshotsAccordionBox.width, // same width as Snapshots
       right: this.snapshotsAccordionBox.right,
