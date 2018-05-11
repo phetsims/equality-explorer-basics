@@ -1,7 +1,7 @@
 // Copyright 2018, University of Colorado Boulder
 
 /**
- * Accordion box that allows the student to modify the weights (values) of object types.
+ * Accordion box that allows the student to modify the values of object types.
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
@@ -19,7 +19,7 @@ define( function( require ) {
   var MathSymbols = require( 'SCENERY_PHET/MathSymbols' );
   var Node = require( 'SCENERY/nodes/Node' );
   var NumberPicker = require( 'SCENERY_PHET/NumberPicker' );
-  var ObjectType = require( 'EQUALITY_EXPLORER/basics/model/ObjectType' );
+  var ObjectVariable = require( 'EQUALITY_EXPLORER/basics/model/ObjectVariable' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var Property = require( 'AXON/Property' );
   var Text = require( 'SCENERY/nodes/Text' );
@@ -28,11 +28,11 @@ define( function( require ) {
   var valuesString = require( 'string!EQUALITY_EXPLORER_BASICS/values' );
 
   /**
-   * @param {ObjectType[]} objectTypes
+   * @param {ObjectVariable[]} variables
    * @param {Object} [options]
    * @constructor
    */
-  function ValuesAccordionBox( objectTypes, options ) {
+  function ValuesAccordionBox( variables, options ) {
 
     options = _.extend( {}, EqualityExplorerConstants.ACCORDION_BOX_OPTIONS, {
 
@@ -60,11 +60,10 @@ define( function( require ) {
     var strut = new HStrut( contentWidth );
 
     var children = [];
-    objectTypes.forEach( function( objectType ) {
-      assert && assert( objectType instanceof ObjectType, 'invalid objectType: ' + objectType );
-      assert && assert( objectType.weightProperty, 'objectType is missing weightProperty: ' + objectType );
+    variables.forEach( function( variable ) {
+      assert && assert( variable instanceof ObjectVariable, 'invalid variable: ' + variable );
 
-      var icon = new Image( objectType.image, {
+      var icon = new Image( variable.image, {
         maxHeight: EqualityExplorerConstants.SMALL_TERM_DIAMETER
       } );
 
@@ -73,7 +72,7 @@ define( function( require ) {
       } );
 
       // NumberPicker.dispose not needed
-      var valuePicker = new NumberPicker( objectType.weightProperty, new Property( objectType.weightRange ), {
+      var valuePicker = new NumberPicker( variable.valueProperty, new Property( variable.range ), {
         color: 'black',
         font: new PhetFont( options.fontSize ),
         xMargin: 6,

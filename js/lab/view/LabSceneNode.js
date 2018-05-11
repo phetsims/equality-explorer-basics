@@ -2,7 +2,7 @@
 
 /**
  * View of a scene in the 'Lab' screen.
- * Same as the 'Basics' screen, but with controls for changing the values (weights) of object types.
+ * Same as the 'Basics' screen, but with controls for changing the values of object types.
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
@@ -30,19 +30,19 @@ define( function( require ) {
     }, options );
 
     // @private whether the Variable accordion box is expanded or collapsed
-    this.weightsAccordionBoxExpandedProperty = new BooleanProperty( true );
+    this.valuesAccordionBoxExpandedProperty = new BooleanProperty( true );
 
     BasicsSceneNode.call( this, scene, sceneProperty, layoutBounds, options );
 
     // Weights accordion box, below the Snapshots accordion box
-    var weightsAccordionBox = new ValuesAccordionBox( scene.objectTypes, {
-      expandedProperty: this.weightsAccordionBoxExpandedProperty,
+    var valuesAccordionBox = new ValuesAccordionBox( scene.variables, {
+      expandedProperty: this.valuesAccordionBoxExpandedProperty,
       fixedWidth: this.snapshotsAccordionBox.width, // same width as Snapshots
       right: this.snapshotsAccordionBox.right,
       top: this.snapshotsAccordionBox.bottom + 15
     } );
-    this.addChild( weightsAccordionBox );
-    weightsAccordionBox.moveToBack();
+    this.addChild( valuesAccordionBox );
+    valuesAccordionBox.moveToBack();
   }
 
   equalityExplorerBasics.register( 'LabSceneNode', LabSceneNode );
@@ -54,7 +54,7 @@ define( function( require ) {
      * @override
      */
     reset: function() {
-      this.weightsAccordionBoxExpandedProperty.reset();
+      this.valuesAccordionBoxExpandedProperty.reset();
       BasicsSceneNode.prototype.reset.call( this );
     }
   } );
