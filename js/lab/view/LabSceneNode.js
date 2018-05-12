@@ -29,11 +29,19 @@ define( function( require ) {
   function LabSceneNode( scene, sceneProperty, layoutBounds, options ) {
 
     options = _.extend( {
-      termsToolboxSpacing: 50 // horizontal spacing between terms in the toolbox
+      termsToolboxSpacing: 50, // horizontal spacing between terms in the toolbox
+      snapshotControlOrientation: 'vertical', // put variable values below equations in Snapshots
+      snapshotControlCommaSeparated: false // don't separate variable values with commas in Snapshots
     }, options );
 
     // @private whether the Variable accordion box is expanded or collapsed
     this.valuesAccordionBoxExpandedProperty = new BooleanProperty( true );
+
+    // @private whether variable values are visible in snapshots
+    this.variableValuesVisibleProperty = new BooleanProperty( true );
+
+    assert && assert( !options.variableValuesVisibleProperty, 'LabSceneNode sets variableValuesVisibleProperty' );
+    options.variableValuesVisibleProperty = this.variableValuesVisibleProperty;
 
     BasicsSceneNode.call( this, scene, sceneProperty, layoutBounds, options );
 
@@ -60,6 +68,7 @@ define( function( require ) {
      */
     reset: function() {
       this.valuesAccordionBoxExpandedProperty.reset();
+      this.variableValuesVisibleProperty.reset();
       BasicsSceneNode.prototype.reset.call( this );
     }
   } );
