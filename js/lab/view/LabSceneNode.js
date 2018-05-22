@@ -46,17 +46,17 @@ define( function( require ) {
 
     BasicsSceneNode.call( this, scene, sceneProperty, layoutBounds, options );
 
-    // Values accordion box, below the Snapshots accordion box
+    // Values accordion box, above the Snapshots accordion box
     var valuesAccordionBox = new VariablesAccordionBox( scene.variables, {
       titleString: valuesString,
-      showTitleWhenExpanded: true,
       expandedProperty: this.valuesAccordionBoxExpandedProperty,
       fixedWidth: this.snapshotsAccordionBox.width, // same width as Snapshots
       right: this.snapshotsAccordionBox.right,
-      top: this.snapshotsAccordionBox.bottom + 15
+      top: this.snapshotsAccordionBox.top
     } );
     this.addChild( valuesAccordionBox );
     valuesAccordionBox.moveToBack();
+    this.snapshotsAccordionBox.top = valuesAccordionBox.bottom + 15;
   }
 
   equalityExplorerBasics.register( 'LabSceneNode', LabSceneNode );
