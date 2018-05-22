@@ -56,7 +56,7 @@ define( function( require ) {
     } );
     this.addChild( valuesAccordionBox );
     valuesAccordionBox.moveToBack();
-    this.snapshotsAccordionBox.top = valuesAccordionBox.bottom + 15;
+    this.snapshotsAccordionBox.top = valuesAccordionBox.bottom + 10;
   }
 
   equalityExplorerBasics.register( 'LabSceneNode', LabSceneNode );
