@@ -28,6 +28,9 @@ define( function( require ) {
   // strings
   var screenLabString = require( 'string!EQUALITY_EXPLORER_BASICS/screen.lab' );
 
+  // constants
+  var BACKGROUND_COLOR = EqualityExplorerColors.BASICS_SCREEN_BACKGROUND;
+
   /**
    * @param {Object} [options]
    * @constructor
@@ -36,7 +39,7 @@ define( function( require ) {
 
     options = _.extend( {
       name: screenLabString,
-      backgroundColorProperty: new Property( EqualityExplorerColors.BASICS_SCREEN_BACKGROUND ),
+      backgroundColorProperty: new Property( BACKGROUND_COLOR ),
       homeScreenIcon: createScreenIcon()
     }, options );
 
@@ -67,7 +70,7 @@ define( function( require ) {
 
     return new ScreenIcon( iconNode, {
       maxIconWidthProportion: 0.75,
-      fill: EqualityExplorerColors.VARIABLES_SCREEN_BACKGROUND
+      fill: BACKGROUND_COLOR
     } );
   }
 
