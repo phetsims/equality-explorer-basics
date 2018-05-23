@@ -30,7 +30,7 @@ define( function( require ) {
 
     options = _.extend( {
       termsToolboxSpacing: 50, // horizontal spacing between terms in the toolbox
-      snapshotControlHeight: 60, // height of each snapshot, a bit taller than default since values are below equations
+      snapshotControlHeight: 65, // height of each snapshot, a bit taller than default since values are below equations
       snapshotControlOrientation: 'vertical', // put variable values below equations in Snapshots
       snapshotControlCommaSeparated: false // don't separate variable values with commas in Snapshots
     }, options );
