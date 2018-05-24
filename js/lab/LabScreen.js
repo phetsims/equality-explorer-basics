@@ -71,12 +71,12 @@ define( function( require ) {
     } );
 
     var iconNode = new HBox( {
-      spacing: 10,
+      spacing: 5,
       children: [ squareNode, equalsNode, pickerNode ]
     } );
 
     return new ScreenIcon( iconNode, {
-      maxIconWidthProportion: 0.75,
+      maxIconWidthProportion: 0.8,
       fill: BACKGROUND_COLOR
     } );
   }
