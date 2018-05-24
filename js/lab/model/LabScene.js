@@ -13,6 +13,7 @@ define( function( require ) {
   var equalityExplorerBasics = require( 'EQUALITY_EXPLORER_BASICS/equalityExplorerBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var ObjectVariable = require( 'EQUALITY_EXPLORER/basics/model/ObjectVariable' );
+  var Range = require( 'DOT/Range' );
 
   // images
   var sphereImage = require( 'image!EQUALITY_EXPLORER/sphere.png' );
@@ -27,12 +28,16 @@ define( function( require ) {
    */
   function LabScene() {
 
+    var objectVariableOptions = {
+      range: new Range( 0, 20 )
+    };
+
     var variables = [
 
       // name, image, shadow
-      new ObjectVariable( 'sphere', sphereImage, sphereShadowImage ),
-      new ObjectVariable( 'square', squareImage, squareShadowImage ),
-      new ObjectVariable( 'triangle', triangleImage, triangleShadowImage )
+      new ObjectVariable( 'sphere', sphereImage, sphereShadowImage, objectVariableOptions ),
+      new ObjectVariable( 'square', squareImage, squareShadowImage, objectVariableOptions ),
+      new ObjectVariable( 'triangle', triangleImage, triangleShadowImage, objectVariableOptions )
     ];
 
     BasicsScene.call( this, variables, {
