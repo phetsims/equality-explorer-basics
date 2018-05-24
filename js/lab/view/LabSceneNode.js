@@ -50,6 +50,8 @@ define( function( require ) {
     var valuesAccordionBox = new VariablesAccordionBox( scene.variables, {
       titleString: valuesString,
       expandedProperty: this.valuesAccordionBoxExpandedProperty,
+      //TODO potential solution for #30
+      // fixedWidth: this.snapshotsAccordionBox.width + 40, // same width as Snapshots
       fixedWidth: this.snapshotsAccordionBox.width, // same width as Snapshots
       right: this.snapshotsAccordionBox.right,
       top: this.snapshotsAccordionBox.top
