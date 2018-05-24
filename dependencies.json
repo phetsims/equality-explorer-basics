@@ -1,5 +1,5 @@
 {
-  "comment": "# equality-explorer-basics 1.0.0-dev.5 Tue May 22 2018 14:11:06 GMT-0600 (MDT)",
+  "comment": "# equality-explorer-basics 1.0.0-dev.6 Wed May 23 2018 21:15:26 GMT-0600 (MDT)",
   "assert": {
     "sha": "928741cfc8fe804334d5b35292140314511f8678",
     "branch": "master"
@@ -13,7 +13,7 @@
     "branch": "master"
   },
   "chipper": {
-    "sha": "fe3864e45db9f70439770c5821ccf0639cb1e15b",
+    "sha": "5ada34e8206025a5fe6e1994a17c082b042082db",
     "branch": "master"
   },
   "dot": {
@@ -21,15 +21,15 @@
     "branch": "master"
   },
   "equality-explorer": {
-    "sha": "a5b03b9814e2b40a357a22a181d053ae77d8d5ae",
+    "sha": "0a8dac48fcacfe1856dda3079257656f144008c9",
     "branch": "master"
   },
   "equality-explorer-basics": {
-    "sha": "ef50ac281bac8afb5b2c35f48108d7ccf4e87b83",
+    "sha": "560bb4e813d98ddf343f6744a34cd7033edea621",
     "branch": "master"
   },
   "joist": {
-    "sha": "734faa8e264a7e56197e94661e333d5bd47d26f6",
+    "sha": "2b4b6cfcf1e5d4ae0203f5dbd9f65a0b54c5b64b",
     "branch": "master"
   },
   "kite": {
@@ -65,7 +65,7 @@
     "branch": "master"
   },
   "scenery": {
-    "sha": "06fcb0a0b58bd16ec881b4024abbf782ed205cb8",
+    "sha": "766eae1c62c1f47d8f61ff2b711497aa6898b671",
     "branch": "master"
   },
   "scenery-phet": {
