@@ -23,21 +23,29 @@ define( function( require ) {
   var triangleImage = require( 'image!EQUALITY_EXPLORER_BASICS/triangle.png' );
   var triangleShadowImage = require( 'image!EQUALITY_EXPLORER_BASICS/triangleShadow.png' );
 
+  // constants
+  var VALUE_RANGE = new Range( 0, 20 );
+
   /**
    * @constructor
    */
   function LabScene() {
 
-    var objectVariableOptions = {
-      range: new Range( 0, 20 )
-    };
-
     var variables = [
 
       // name, image, shadow
-      new ObjectVariable( 'sphere', sphereImage, sphereShadowImage, objectVariableOptions ),
-      new ObjectVariable( 'square', squareImage, squareShadowImage, objectVariableOptions ),
-      new ObjectVariable( 'triangle', triangleImage, triangleShadowImage, objectVariableOptions )
+      new ObjectVariable( 'sphere', sphereImage, sphereShadowImage, {
+        value: 1,
+        range: VALUE_RANGE
+      } ),
+      new ObjectVariable( 'square', squareImage, squareShadowImage, {
+        value: 2,
+        range: VALUE_RANGE
+      } ),
+      new ObjectVariable( 'triangle', triangleImage, triangleShadowImage, {
+        value: 3,
+        range: VALUE_RANGE
+      } )
     ];
 
     BasicsScene.call( this, variables, {
