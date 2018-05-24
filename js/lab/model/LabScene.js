@@ -19,9 +19,8 @@ define( function( require ) {
   var sphereShadowImage = require( 'image!EQUALITY_EXPLORER/sphereShadow.png' );
   var squareImage = require( 'image!EQUALITY_EXPLORER/square.png' );
   var squareShadowImage = require( 'image!EQUALITY_EXPLORER/squareShadow.png' );
-  //TODO replace with triangle, see https://github.com/phetsims/equality-explorer-basics/issues/3
-  var orangeImage = require( 'image!EQUALITY_EXPLORER/orange.png' );
-  var orangeShadowImage = require( 'image!EQUALITY_EXPLORER/orangeShadow.png' );
+  var triangleImage = require( 'image!EQUALITY_EXPLORER_BASICS/triangle.png' );
+  var triangleShadowImage = require( 'image!EQUALITY_EXPLORER_BASICS/triangleShadow.png' );
 
   /**
    * @constructor
@@ -33,7 +32,7 @@ define( function( require ) {
       // name, image, shadow
       new ObjectVariable( 'sphere', sphereImage, sphereShadowImage ),
       new ObjectVariable( 'square', squareImage, squareShadowImage ),
-      new ObjectVariable( 'triangle', orangeImage, orangeShadowImage )
+      new ObjectVariable( 'triangle', triangleImage, triangleShadowImage )
     ];
 
     BasicsScene.call( this, variables, {
