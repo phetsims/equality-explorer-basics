@@ -17,10 +17,13 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var LabModel = require( 'EQUALITY_EXPLORER_BASICS/lab/model/LabModel' );
   var LabScreenView = require( 'EQUALITY_EXPLORER_BASICS/lab/view/LabScreenView' );
+  var MathSymbols = require( 'SCENERY_PHET/MathSymbols' );
   var NumberPicker = require( 'SCENERY_PHET/NumberPicker' );
+  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var Property = require( 'AXON/Property' );
   var Range = require( 'DOT/Range' );
   var ScreenIcon = require( 'JOIST/ScreenIcon' );
+  var Text = require( 'SCENERY/nodes/Text' );
 
   // images
   var squareImage = require( 'image!EQUALITY_EXPLORER/square.png' );
@@ -52,11 +55,15 @@ define( function( require ) {
 
   equalityExplorerBasics.register( 'LabScreen', LabScreen );
 
-  // Creates the icon for this screen, a shape and a picker
+  // Creates the icon for this screen: square = picker
   function createScreenIcon() {
 
     var squareNode = new Image( squareImage, {
       scale: 0.75
+    } );
+
+    var equalsNode = new Text( MathSymbols.EQUAL_TO, {
+      font: new PhetFont( { size: 30, weight: 'bold' } )
     } );
 
     var pickerNode = new NumberPicker( new Property( 7 ), new Property( new Range( 0, 10 ) ), {
@@ -65,7 +72,7 @@ define( function( require ) {
 
     var iconNode = new HBox( {
       spacing: 10,
-      children: [ squareNode, pickerNode ]
+      children: [ squareNode, equalsNode, pickerNode ]
     } );
 
     return new ScreenIcon( iconNode, {
