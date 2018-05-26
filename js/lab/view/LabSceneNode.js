@@ -32,7 +32,8 @@ define( function( require ) {
       termsToolboxSpacing: 50, // horizontal spacing between terms in the toolbox
       snapshotControlHeight: 70, // height of each snapshot, a bit taller than default since values are below equations
       snapshotControlOrientation: 'vertical', // put variable values below equations in Snapshots
-      snapshotControlCommaSeparated: false // don't separate variable values with commas in Snapshots
+      snapshotControlCommaSeparated: false, // don't separate variable values with commas in Snapshots
+      snapshotControlVariableValuesOpacity: 0.75 // de-emphasize variable values in Snapshots
     }, options );
 
     // @private whether the Variable accordion box is expanded or collapsed
