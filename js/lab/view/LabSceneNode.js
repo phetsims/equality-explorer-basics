@@ -59,6 +59,8 @@ define( function( require ) {
     } );
     this.addChild( valuesAccordionBox );
     valuesAccordionBox.moveToBack();
+
+    // shift the Snapshots accordion box down
     this.snapshotsAccordionBox.top = valuesAccordionBox.bottom + 10;
   }
 
