@@ -50,7 +50,7 @@ define( function( require ) {
 
     BasicsScene.call( this, variables, {
       debugName: 'lab',
-      numberOfSnapshots: 4
+      numberOfSnapshots: 4 // fewer snapshots in this screen because we're short on vertical space
     } );
   }
 
