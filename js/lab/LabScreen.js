@@ -41,6 +41,8 @@ define( function( require ) {
   function LabScreen( options ) {
 
     options = _.extend( {
+
+      // EqualityExplorerScreen options
       name: screenLabString,
       backgroundColorProperty: new Property( BACKGROUND_COLOR ),
       homeScreenIcon: createScreenIcon()

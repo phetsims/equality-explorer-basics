@@ -29,6 +29,8 @@ define( function( require ) {
   function LabSceneNode( scene, sceneProperty, layoutBounds, options ) {
 
     options = _.extend( {
+
+      // BasicsSceneNode options
       termsToolboxSpacing: 50, // horizontal spacing between terms in the toolbox
       snapshotControlOptions: {
         orientation: 'vertical',// put variable values below equations in Snapshots
