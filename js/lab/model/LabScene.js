@@ -24,7 +24,7 @@ define( function( require ) {
   var triangleShadowImage = require( 'image!EQUALITY_EXPLORER_BASICS/triangleShadow.png' );
 
   // constants
-  var VALUE_RANGE = new Range( 0, 20 );
+  var VALUE_RANGE = new Range( 1, 20 );
 
   /**
    * @constructor
