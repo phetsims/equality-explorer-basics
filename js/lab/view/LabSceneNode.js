@@ -22,12 +22,14 @@ define( function( require ) {
   /**
    * @param {LabScene} scene
    * @param {Property.<Scene>} sceneProperty - the selected scene
+   * @param {BooleanProperty} equationAccordionBoxExpandedProperty
    * @param {BooleanProperty} snapshotsAccordionBoxExpandedProperty
    * @param {Bounds2} layoutBounds
    * @param {Object} [options]
    * @constructor
    */
-  function LabSceneNode( scene, sceneProperty, snapshotsAccordionBoxExpandedProperty, layoutBounds, options ) {
+  function LabSceneNode( scene, sceneProperty, equationAccordionBoxExpandedProperty,
+                         snapshotsAccordionBoxExpandedProperty, layoutBounds, options ) {
 
     options = _.extend( {
 
@@ -50,7 +52,8 @@ define( function( require ) {
     assert && assert( !options.variableValuesVisibleProperty, 'LabSceneNode sets variableValuesVisibleProperty' );
     options.variableValuesVisibleProperty = this.variableValuesVisibleProperty;
 
-    BasicsSceneNode.call( this, scene, sceneProperty, snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
+    BasicsSceneNode.call( this, scene, sceneProperty, equationAccordionBoxExpandedProperty,
+      snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
 
     // Values accordion box, above the Snapshots accordion box
     var valuesAccordionBox = new VariablesAccordionBox( scene.variables, {
@@ -78,7 +81,6 @@ define( function( require ) {
     reset: function() {
       this.valuesAccordionBoxExpandedProperty.reset();
       this.variableValuesVisibleProperty.reset();
-      BasicsSceneNode.prototype.reset.call( this );
     }
   } );
 } );
