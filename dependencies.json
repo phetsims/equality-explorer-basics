@@ -1,5 +1,5 @@
 {
-  "comment": "# equality-explorer-basics 1.0.1-rc.1 Wed Jul 25 2018 04:21:12 GMT-0600 (MDT)",
+  "comment": "# equality-explorer-basics 1.0.1 Wed Aug 08 2018 13:30:58 GMT-0600 (MDT)",
   "assert": {
     "sha": "928741cfc8fe804334d5b35292140314511f8678",
     "branch": "HEAD"
@@ -25,7 +25,7 @@
     "branch": "HEAD"
   },
   "equality-explorer-basics": {
-    "sha": "37cb7492e0b03113d8a1f255a2ea901a498d8316",
+    "sha": "ace2bc3ad1ebaaa4979785ea055fa16fc4033fb0",
     "branch": "1.0"
   },
   "joist": {
