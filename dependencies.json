@@ -1,5 +1,5 @@
 {
-  "comment": "# equality-explorer-basics 1.0.4 Thu Apr 04 2019 10:20:18 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# equality-explorer-basics 1.0.4 Wed Apr 17 2019 13:12:00 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "928741cfc8fe804334d5b35292140314511f8678",
     "branch": "HEAD"
@@ -13,8 +13,8 @@
     "branch": "HEAD"
   },
   "chipper": {
-    "sha": "195cb57e901bab386214906d7cc020ecbb44cd02",
-    "branch": "HEAD"
+    "sha": "504983f55e5c0dc5ca10e7b2d299010c9a885185",
+    "branch": "equality-explorer-basics-1.0"
   },
   "dot": {
     "sha": "383e4b027cf7c42388d3b19990537c1c0c7c20e3",
@@ -25,7 +25,7 @@
     "branch": "HEAD"
   },
   "equality-explorer-basics": {
-    "sha": "c5c888379ec2174c022364790ac5b2207211b3a8",
+    "sha": "227aa727cf91ac5d5a4334e74c40a4c817b72d95",
     "branch": "1.0"
   },
   "joist": {
