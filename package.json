@@ -14,8 +14,7 @@
     "phetLibs": [
       "equality-explorer",
       "twixt",
-      "vegas",
-      "vibe"
+      "vegas"
     ],
     "runnable": true,
     "simulation": true,
