@@ -5,31 +5,31 @@
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
-define( function( require ) {
+define( require => {
   'use strict';
 
   // modules
-  var equalityExplorerBasics = require( 'EQUALITY_EXPLORER_BASICS/equalityExplorerBasics' );
-  var EqualityExplorerColors = require( 'EQUALITY_EXPLORER/common/EqualityExplorerColors' );
-  var EqualityExplorerScreen = require( 'EQUALITY_EXPLORER/common/EqualityExplorerScreen' );
-  var HBox = require( 'SCENERY/nodes/HBox' );
-  var Image = require( 'SCENERY/nodes/Image' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var LabModel = require( 'EQUALITY_EXPLORER_BASICS/lab/model/LabModel' );
-  var LabScreenView = require( 'EQUALITY_EXPLORER_BASICS/lab/view/LabScreenView' );
-  var MathSymbols = require( 'SCENERY_PHET/MathSymbols' );
-  var NumberPicker = require( 'SCENERY_PHET/NumberPicker' );
-  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
-  var Property = require( 'AXON/Property' );
-  var Range = require( 'DOT/Range' );
-  var ScreenIcon = require( 'JOIST/ScreenIcon' );
-  var Text = require( 'SCENERY/nodes/Text' );
+  const equalityExplorerBasics = require( 'EQUALITY_EXPLORER_BASICS/equalityExplorerBasics' );
+  const EqualityExplorerColors = require( 'EQUALITY_EXPLORER/common/EqualityExplorerColors' );
+  const EqualityExplorerScreen = require( 'EQUALITY_EXPLORER/common/EqualityExplorerScreen' );
+  const HBox = require( 'SCENERY/nodes/HBox' );
+  const Image = require( 'SCENERY/nodes/Image' );
+  const inherit = require( 'PHET_CORE/inherit' );
+  const LabModel = require( 'EQUALITY_EXPLORER_BASICS/lab/model/LabModel' );
+  const LabScreenView = require( 'EQUALITY_EXPLORER_BASICS/lab/view/LabScreenView' );
+  const MathSymbols = require( 'SCENERY_PHET/MathSymbols' );
+  const NumberPicker = require( 'SCENERY_PHET/NumberPicker' );
+  const PhetFont = require( 'SCENERY_PHET/PhetFont' );
+  const Property = require( 'AXON/Property' );
+  const Range = require( 'DOT/Range' );
+  const ScreenIcon = require( 'JOIST/ScreenIcon' );
+  const Text = require( 'SCENERY/nodes/Text' );
 
   // images
-  var squareImage = require( 'image!EQUALITY_EXPLORER/square.png' );
+  const squareImage = require( 'image!EQUALITY_EXPLORER/square.png' );
 
   // strings
-  var screenLabString = require( 'string!EQUALITY_EXPLORER_BASICS/screen.lab' );
+  const screenLabString = require( 'string!EQUALITY_EXPLORER_BASICS/screen.lab' );
 
   // constants
   var BACKGROUND_COLOR = EqualityExplorerColors.BASICS_SCREEN_BACKGROUND;

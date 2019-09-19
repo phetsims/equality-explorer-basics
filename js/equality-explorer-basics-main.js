@@ -5,18 +5,18 @@
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
-define( function( require ) {
+define( require => {
   'use strict';
 
   // modules
-  var BasicsScreen = require( 'EQUALITY_EXPLORER/basics/BasicsScreen' );
-  var EqualityExplorerConstants = require( 'EQUALITY_EXPLORER/common/EqualityExplorerConstants' );
-  var LabScreen = require( 'EQUALITY_EXPLORER_BASICS/lab/LabScreen' );
-  var Sim = require( 'JOIST/Sim' );
-  var SimLauncher = require( 'JOIST/SimLauncher' );
+  const BasicsScreen = require( 'EQUALITY_EXPLORER/basics/BasicsScreen' );
+  const EqualityExplorerConstants = require( 'EQUALITY_EXPLORER/common/EqualityExplorerConstants' );
+  const LabScreen = require( 'EQUALITY_EXPLORER_BASICS/lab/LabScreen' );
+  const Sim = require( 'JOIST/Sim' );
+  const SimLauncher = require( 'JOIST/SimLauncher' );
 
   // strings
-  var equalityExplorerBasicsTitleString = require( 'string!EQUALITY_EXPLORER_BASICS/equality-explorer-basics.title' );
+  const equalityExplorerBasicsTitleString = require( 'string!EQUALITY_EXPLORER_BASICS/equality-explorer-basics.title' );
 
   SimLauncher.launch( function() {
     var sim = new Sim( equalityExplorerBasicsTitleString, [ new BasicsScreen(), new LabScreen() ], {

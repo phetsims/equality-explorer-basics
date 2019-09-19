@@ -6,18 +6,18 @@
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
-define( function( require ) {
+define( require => {
   'use strict';
 
   // modules
-  var BasicsSceneNode = require( 'EQUALITY_EXPLORER/basics/view/BasicsSceneNode' );
-  var BooleanProperty = require( 'AXON/BooleanProperty' );
-  var equalityExplorerBasics = require( 'EQUALITY_EXPLORER_BASICS/equalityExplorerBasics' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var VariablesAccordionBox = require( 'EQUALITY_EXPLORER/common/view/VariablesAccordionBox' );
+  const BasicsSceneNode = require( 'EQUALITY_EXPLORER/basics/view/BasicsSceneNode' );
+  const BooleanProperty = require( 'AXON/BooleanProperty' );
+  const equalityExplorerBasics = require( 'EQUALITY_EXPLORER_BASICS/equalityExplorerBasics' );
+  const inherit = require( 'PHET_CORE/inherit' );
+  const VariablesAccordionBox = require( 'EQUALITY_EXPLORER/common/view/VariablesAccordionBox' );
 
   // strings
-  var valuesString = require( 'string!EQUALITY_EXPLORER_BASICS/values' );
+  const valuesString = require( 'string!EQUALITY_EXPLORER_BASICS/values' );
 
   /**
    * @param {LabScene} scene

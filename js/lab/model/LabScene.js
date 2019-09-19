@@ -5,23 +5,23 @@
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
-define( function( require ) {
+define( require => {
   'use strict';
 
   // modules
-  var BasicsScene = require( 'EQUALITY_EXPLORER/basics/model/BasicsScene' );
-  var equalityExplorerBasics = require( 'EQUALITY_EXPLORER_BASICS/equalityExplorerBasics' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var ObjectVariable = require( 'EQUALITY_EXPLORER/basics/model/ObjectVariable' );
-  var Range = require( 'DOT/Range' );
+  const BasicsScene = require( 'EQUALITY_EXPLORER/basics/model/BasicsScene' );
+  const equalityExplorerBasics = require( 'EQUALITY_EXPLORER_BASICS/equalityExplorerBasics' );
+  const inherit = require( 'PHET_CORE/inherit' );
+  const ObjectVariable = require( 'EQUALITY_EXPLORER/basics/model/ObjectVariable' );
+  const Range = require( 'DOT/Range' );
 
   // images
-  var sphereImage = require( 'image!EQUALITY_EXPLORER/sphere.png' );
-  var sphereShadowImage = require( 'image!EQUALITY_EXPLORER/sphereShadow.png' );
-  var squareImage = require( 'image!EQUALITY_EXPLORER/square.png' );
-  var squareShadowImage = require( 'image!EQUALITY_EXPLORER/squareShadow.png' );
-  var triangleImage = require( 'image!EQUALITY_EXPLORER_BASICS/triangle.png' );
-  var triangleShadowImage = require( 'image!EQUALITY_EXPLORER_BASICS/triangleShadow.png' );
+  const sphereImage = require( 'image!EQUALITY_EXPLORER/sphere.png' );
+  const sphereShadowImage = require( 'image!EQUALITY_EXPLORER/sphereShadow.png' );
+  const squareImage = require( 'image!EQUALITY_EXPLORER/square.png' );
+  const squareShadowImage = require( 'image!EQUALITY_EXPLORER/squareShadow.png' );
+  const triangleImage = require( 'image!EQUALITY_EXPLORER_BASICS/triangle.png' );
+  const triangleShadowImage = require( 'image!EQUALITY_EXPLORER_BASICS/triangleShadow.png' );
 
   // constants
   var VALUE_RANGE = new Range( 1, 20 );

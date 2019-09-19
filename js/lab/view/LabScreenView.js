@@ -5,14 +5,14 @@
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
-define( function( require ) {
+define( require => {
   'use strict';
 
   // modules
-  var equalityExplorerBasics = require( 'EQUALITY_EXPLORER_BASICS/equalityExplorerBasics' );
-  var EqualityExplorerScreenView = require( 'EQUALITY_EXPLORER/common/view/EqualityExplorerScreenView' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var LabSceneNode = require( 'EQUALITY_EXPLORER_BASICS/lab/view/LabSceneNode' );
+  const equalityExplorerBasics = require( 'EQUALITY_EXPLORER_BASICS/equalityExplorerBasics' );
+  const EqualityExplorerScreenView = require( 'EQUALITY_EXPLORER/common/view/EqualityExplorerScreenView' );
+  const inherit = require( 'PHET_CORE/inherit' );
+  const LabSceneNode = require( 'EQUALITY_EXPLORER_BASICS/lab/view/LabSceneNode' );
 
   /**
    * @param {LabModel} model
