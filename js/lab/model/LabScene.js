@@ -24,14 +24,14 @@ define( require => {
   const triangleShadowImage = require( 'image!EQUALITY_EXPLORER_BASICS/triangleShadow.png' );
 
   // constants
-  var VALUE_RANGE = new Range( 1, 20 );
+  const VALUE_RANGE = new Range( 1, 20 );
 
   /**
    * @constructor
    */
   function LabScene() {
 
-    var variables = [
+    const variables = [
 
       // name, image, shadow
       new ObjectVariable( 'sphere', sphereImage, sphereShadowImage, {

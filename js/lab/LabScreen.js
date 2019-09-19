@@ -32,7 +32,7 @@ define( require => {
   const screenLabString = require( 'string!EQUALITY_EXPLORER_BASICS/screen.lab' );
 
   // constants
-  var BACKGROUND_COLOR = EqualityExplorerColors.BASICS_SCREEN_BACKGROUND;
+  const BACKGROUND_COLOR = EqualityExplorerColors.BASICS_SCREEN_BACKGROUND;
 
   /**
    * @param {Object} [options]
@@ -60,19 +60,19 @@ define( require => {
   // Creates the icon for this screen: square = picker
   function createScreenIcon() {
 
-    var squareNode = new Image( squareImage, {
+    const squareNode = new Image( squareImage, {
       scale: 0.75
     } );
 
-    var equalsNode = new Text( MathSymbols.EQUAL_TO, {
+    const equalsNode = new Text( MathSymbols.EQUAL_TO, {
       font: new PhetFont( { size: 30, weight: 'bold' } )
     } );
 
-    var pickerNode = new NumberPicker( new Property( 7 ), new Property( new Range( 0, 10 ) ), {
+    const pickerNode = new NumberPicker( new Property( 7 ), new Property( new Range( 0, 10 ) ), {
       color: 'black'
     } );
 
-    var iconNode = new HBox( {
+    const iconNode = new HBox( {
       spacing: 5,
       children: [ squareNode, equalsNode, pickerNode ]
     } );

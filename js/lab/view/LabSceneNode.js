@@ -56,7 +56,7 @@ define( require => {
       snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
 
     // Values accordion box, above the Snapshots accordion box
-    var valuesAccordionBox = new VariablesAccordionBox( scene.variables, {
+    const valuesAccordionBox = new VariablesAccordionBox( scene.variables, {
       titleString: valuesString,
       expandedProperty: this.valuesAccordionBoxExpandedProperty,
       fixedWidth: this.snapshotsAccordionBox.width + 40, // wider so that pickers are usable size, see #3
