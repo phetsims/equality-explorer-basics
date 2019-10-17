@@ -14,6 +14,7 @@ define( require => {
   const BooleanProperty = require( 'AXON/BooleanProperty' );
   const equalityExplorerBasics = require( 'EQUALITY_EXPLORER_BASICS/equalityExplorerBasics' );
   const inherit = require( 'PHET_CORE/inherit' );
+  const merge = require( 'PHET_CORE/merge' );
   const VariablesAccordionBox = require( 'EQUALITY_EXPLORER/common/view/VariablesAccordionBox' );
 
   // strings
@@ -31,7 +32,7 @@ define( require => {
   function LabSceneNode( scene, sceneProperty, equationAccordionBoxExpandedProperty,
                          snapshotsAccordionBoxExpandedProperty, layoutBounds, options ) {
 
-    options = _.extend( {
+    options = merge( {
 
       // BasicsSceneNode options
       termsToolboxSpacing: 50, // horizontal spacing between terms in the toolbox

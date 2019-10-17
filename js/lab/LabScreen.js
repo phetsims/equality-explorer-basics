@@ -18,6 +18,7 @@ define( require => {
   const LabModel = require( 'EQUALITY_EXPLORER_BASICS/lab/model/LabModel' );
   const LabScreenView = require( 'EQUALITY_EXPLORER_BASICS/lab/view/LabScreenView' );
   const MathSymbols = require( 'SCENERY_PHET/MathSymbols' );
+  const merge = require( 'PHET_CORE/merge' );
   const NumberPicker = require( 'SCENERY_PHET/NumberPicker' );
   const PhetFont = require( 'SCENERY_PHET/PhetFont' );
   const Property = require( 'AXON/Property' );
@@ -40,7 +41,7 @@ define( require => {
    */
   function LabScreen( options ) {
 
-    options = _.extend( {
+    options = merge( {
 
       // EqualityExplorerScreen options
       name: screenLabString,
