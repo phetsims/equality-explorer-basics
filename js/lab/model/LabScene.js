@@ -24,7 +24,7 @@ define( require => {
   const triangleShadowImage = require( 'image!EQUALITY_EXPLORER_BASICS/triangleShadow.png' );
 
   // constants
-  const VALUE_RANGE = new Range( 1, 20 );
+  const VARIABLE_RANGE = new Range( 1, 20 );
 
   /**
    * @constructor
@@ -36,15 +36,15 @@ define( require => {
       // name, image, shadow
       new ObjectVariable( 'sphere', sphereImage, sphereShadowImage, {
         value: 1,
-        range: VALUE_RANGE
+        range: VARIABLE_RANGE
       } ),
       new ObjectVariable( 'square', squareImage, squareShadowImage, {
         value: 2,
-        range: VALUE_RANGE
+        range: VARIABLE_RANGE
       } ),
       new ObjectVariable( 'triangle', triangleImage, triangleShadowImage, {
         value: 3,
-        range: VALUE_RANGE
+        range: VARIABLE_RANGE
       } )
     ];
 
