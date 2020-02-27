@@ -18,7 +18,7 @@ define( require => {
   // strings
   const equalityExplorerBasicsTitleString = require( 'string!EQUALITY_EXPLORER_BASICS/equality-explorer-basics.title' );
 
-  SimLauncher.launch( function() {
+  SimLauncher.launch( () => {
     const sim = new Sim( equalityExplorerBasicsTitleString, [ new BasicsScreen(), new LabScreen() ], {
       credits: EqualityExplorerConstants.CREDITS
     } );
