@@ -5,23 +5,20 @@
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const equalityExplorerBasics = require( 'EQUALITY_EXPLORER_BASICS/equalityExplorerBasics' );
-  const EqualityExplorerModel = require( 'EQUALITY_EXPLORER/common/model/EqualityExplorerModel' );
-  const inherit = require( 'PHET_CORE/inherit' );
-  const LabScene = require( 'EQUALITY_EXPLORER_BASICS/lab/model/LabScene' );
+import EqualityExplorerModel from '../../../../equality-explorer/js/common/model/EqualityExplorerModel.js';
+import inherit from '../../../../phet-core/js/inherit.js';
+import equalityExplorerBasics from '../../equalityExplorerBasics.js';
+import LabScene from './LabScene.js';
 
-  /**
-   * @constructor
-   */
-  function LabModel() {
-    EqualityExplorerModel.call( this, [ new LabScene() ] );
-  }
+/**
+ * @constructor
+ */
+function LabModel() {
+  EqualityExplorerModel.call( this, [ new LabScene() ] );
+}
 
-  equalityExplorerBasics.register( 'LabModel', LabModel );
+equalityExplorerBasics.register( 'LabModel', LabModel );
 
-  return inherit( EqualityExplorerModel, LabModel );
-} );
+inherit( EqualityExplorerModel, LabModel );
+export default LabModel;

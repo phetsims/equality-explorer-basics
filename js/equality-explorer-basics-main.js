@@ -5,23 +5,19 @@
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const BasicsScreen = require( 'EQUALITY_EXPLORER/basics/BasicsScreen' );
-  const EqualityExplorerConstants = require( 'EQUALITY_EXPLORER/common/EqualityExplorerConstants' );
-  const LabScreen = require( 'EQUALITY_EXPLORER_BASICS/lab/LabScreen' );
-  const Sim = require( 'JOIST/Sim' );
-  const SimLauncher = require( 'JOIST/SimLauncher' );
+import BasicsScreen from '../../equality-explorer/js/basics/BasicsScreen.js';
+import EqualityExplorerConstants from '../../equality-explorer/js/common/EqualityExplorerConstants.js';
+import Sim from '../../joist/js/Sim.js';
+import SimLauncher from '../../joist/js/SimLauncher.js';
+import equalityExplorerBasicsStrings from './equality-explorer-basics-strings.js';
+import LabScreen from './lab/LabScreen.js';
 
-  // strings
-  const equalityExplorerBasicsTitleString = require( 'string!EQUALITY_EXPLORER_BASICS/equality-explorer-basics.title' );
+const equalityExplorerBasicsTitleString = equalityExplorerBasicsStrings[ 'equality-explorer-basics' ].title;
 
-  SimLauncher.launch( () => {
-    const sim = new Sim( equalityExplorerBasicsTitleString, [ new BasicsScreen(), new LabScreen() ], {
-      credits: EqualityExplorerConstants.CREDITS
-    } );
-    sim.start();
+SimLauncher.launch( () => {
+  const sim = new Sim( equalityExplorerBasicsTitleString, [ new BasicsScreen(), new LabScreen() ], {
+    credits: EqualityExplorerConstants.CREDITS
   } );
+  sim.start();
 } );

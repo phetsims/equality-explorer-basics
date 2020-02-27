@@ -5,56 +5,51 @@
  *
  * @author Chris Malley (PixelZoom, Inc.)
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const BasicsScene = require( 'EQUALITY_EXPLORER/basics/model/BasicsScene' );
-  const equalityExplorerBasics = require( 'EQUALITY_EXPLORER_BASICS/equalityExplorerBasics' );
-  const inherit = require( 'PHET_CORE/inherit' );
-  const ObjectVariable = require( 'EQUALITY_EXPLORER/basics/model/ObjectVariable' );
-  const Range = require( 'DOT/Range' );
+import Range from '../../../../dot/js/Range.js';
+import sphereImage from '../../../../equality-explorer/images/sphere_png.js';
+import sphereShadowImage from '../../../../equality-explorer/images/sphereShadow_png.js';
+import squareImage from '../../../../equality-explorer/images/square_png.js';
+import squareShadowImage from '../../../../equality-explorer/images/squareShadow_png.js';
+import BasicsScene from '../../../../equality-explorer/js/basics/model/BasicsScene.js';
+import ObjectVariable from '../../../../equality-explorer/js/basics/model/ObjectVariable.js';
+import inherit from '../../../../phet-core/js/inherit.js';
+import triangleImage from '../../../images/triangle_png.js';
+import triangleShadowImage from '../../../images/triangleShadow_png.js';
+import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 
-  // images
-  const sphereImage = require( 'image!EQUALITY_EXPLORER/sphere.png' );
-  const sphereShadowImage = require( 'image!EQUALITY_EXPLORER/sphereShadow.png' );
-  const squareImage = require( 'image!EQUALITY_EXPLORER/square.png' );
-  const squareShadowImage = require( 'image!EQUALITY_EXPLORER/squareShadow.png' );
-  const triangleImage = require( 'image!EQUALITY_EXPLORER_BASICS/triangle.png' );
-  const triangleShadowImage = require( 'image!EQUALITY_EXPLORER_BASICS/triangleShadow.png' );
+// constants
+const VARIABLE_RANGE = new Range( 1, 20 );
 
-  // constants
-  const VARIABLE_RANGE = new Range( 1, 20 );
+/**
+ * @constructor
+ */
+function LabScene() {
 
-  /**
-   * @constructor
-   */
-  function LabScene() {
+  const variables = [
 
-    const variables = [
+    // name, image, shadow
+    new ObjectVariable( 'sphere', sphereImage, sphereShadowImage, {
+      value: 1,
+      range: VARIABLE_RANGE
+    } ),
+    new ObjectVariable( 'square', squareImage, squareShadowImage, {
+      value: 2,
+      range: VARIABLE_RANGE
+    } ),
+    new ObjectVariable( 'triangle', triangleImage, triangleShadowImage, {
+      value: 3,
+      range: VARIABLE_RANGE
+    } )
+  ];
 
-      // name, image, shadow
-      new ObjectVariable( 'sphere', sphereImage, sphereShadowImage, {
-        value: 1,
-        range: VARIABLE_RANGE
-      } ),
-      new ObjectVariable( 'square', squareImage, squareShadowImage, {
-        value: 2,
-        range: VARIABLE_RANGE
-      } ),
-      new ObjectVariable( 'triangle', triangleImage, triangleShadowImage, {
-        value: 3,
-        range: VARIABLE_RANGE
-      } )
-    ];
+  BasicsScene.call( this, variables, {
+    debugName: 'lab',
+    numberOfSnapshots: 4 // fewer snapshots in this screen because we're short on vertical space
+  } );
+}
 
-    BasicsScene.call( this, variables, {
-      debugName: 'lab',
-      numberOfSnapshots: 4 // fewer snapshots in this screen because we're short on vertical space
-    } );
-  }
+equalityExplorerBasics.register( 'LabScene', LabScene );
 
-  equalityExplorerBasics.register( 'LabScene', LabScene );
-
-  return inherit( BasicsScene, LabScene );
-} );
+inherit( BasicsScene, LabScene );
+export default LabScene;
