@@ -13,7 +13,6 @@ import squareImage from '../../../../equality-explorer/images/square_png.js';
 import squareShadowImage from '../../../../equality-explorer/images/squareShadow_png.js';
 import BasicsScene from '../../../../equality-explorer/js/basics/model/BasicsScene.js';
 import ObjectVariable from '../../../../equality-explorer/js/basics/model/ObjectVariable.js';
-import inherit from '../../../../phet-core/js/inherit.js';
 import triangleImage from '../../../images/triangle_png.js';
 import triangleShadowImage from '../../../images/triangleShadow_png.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
@@ -21,35 +20,34 @@ import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 // constants
 const VARIABLE_RANGE = new Range( 1, 20 );
 
-/**
- * @constructor
- */
-function LabScene() {
+class LabScene extends BasicsScene {
 
-  const variables = [
+  constructor() {
 
-    // name, image, shadow
-    new ObjectVariable( 'sphere', sphereImage, sphereShadowImage, {
-      value: 1,
-      range: VARIABLE_RANGE
-    } ),
-    new ObjectVariable( 'square', squareImage, squareShadowImage, {
-      value: 2,
-      range: VARIABLE_RANGE
-    } ),
-    new ObjectVariable( 'triangle', triangleImage, triangleShadowImage, {
-      value: 3,
-      range: VARIABLE_RANGE
-    } )
-  ];
+    const variables = [
 
-  BasicsScene.call( this, variables, {
-    debugName: 'lab',
-    numberOfSnapshots: 4 // fewer snapshots in this screen because we're short on vertical space
-  } );
+      // name, image, shadow
+      new ObjectVariable( 'sphere', sphereImage, sphereShadowImage, {
+        value: 1,
+        range: VARIABLE_RANGE
+      } ),
+      new ObjectVariable( 'square', squareImage, squareShadowImage, {
+        value: 2,
+        range: VARIABLE_RANGE
+      } ),
+      new ObjectVariable( 'triangle', triangleImage, triangleShadowImage, {
+        value: 3,
+        range: VARIABLE_RANGE
+      } )
+    ];
+
+    super( variables, {
+      debugName: 'lab',
+      numberOfSnapshots: 4 // fewer snapshots in this screen because we're short on vertical space
+    } );
+  }
 }
 
 equalityExplorerBasics.register( 'LabScene', LabScene );
 
-inherit( BasicsScene, LabScene );
 export default LabScene;

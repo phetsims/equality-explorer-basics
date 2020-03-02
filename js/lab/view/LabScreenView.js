@@ -7,23 +7,19 @@
  */
 
 import EqualityExplorerScreenView from '../../../../equality-explorer/js/common/view/EqualityExplorerScreenView.js';
-import inherit from '../../../../phet-core/js/inherit.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 import LabSceneNode from './LabSceneNode.js';
 
-/**
- * @param {LabModel} model
- * @constructor
- */
-function LabScreenView( model ) {
-  EqualityExplorerScreenView.call( this, model, {
-    hasNegativeTermsInToolbox: false // only positive terms in the toolbox
-  } );
-}
+class LabScreenView extends EqualityExplorerScreenView {
 
-equalityExplorerBasics.register( 'LabScreenView', LabScreenView );
-
-export default inherit( EqualityExplorerScreenView, LabScreenView, {
+  /**
+   * @param {LabModel} model
+   */
+  constructor( model ) {
+    super( model, {
+      hasNegativeTermsInToolbox: false // only positive terms in the toolbox
+    } );
+  }
 
   /**
    * Creates the Node for this scene.
@@ -37,9 +33,13 @@ export default inherit( EqualityExplorerScreenView, LabScreenView, {
    * @protected
    * @override
    */
-  createSceneNode: function( scene, sceneProperty, equationAccordionBoxExpandedProperty,
+  createSceneNode( scene, sceneProperty, equationAccordionBoxExpandedProperty,
                              snapshotsAccordionBoxExpandedProperty, layoutBounds, options ) {
     return new LabSceneNode( scene, sceneProperty, equationAccordionBoxExpandedProperty,
       snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
   }
-} );
+}
+
+equalityExplorerBasics.register( 'LabScreenView', LabScreenView );
+
+export default LabScreenView;

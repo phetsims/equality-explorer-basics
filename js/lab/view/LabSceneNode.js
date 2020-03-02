@@ -10,74 +10,77 @@
 import BooleanProperty from '../../../../axon/js/BooleanProperty.js';
 import BasicsSceneNode from '../../../../equality-explorer/js/basics/view/BasicsSceneNode.js';
 import VariablesAccordionBox from '../../../../equality-explorer/js/common/view/VariablesAccordionBox.js';
-import inherit from '../../../../phet-core/js/inherit.js';
 import merge from '../../../../phet-core/js/merge.js';
 import equalityExplorerBasicsStrings from '../../equality-explorer-basics-strings.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 
 const valuesString = equalityExplorerBasicsStrings.values;
 
-/**
- * @param {LabScene} scene
- * @param {Property.<Scene>} sceneProperty - the selected scene
- * @param {BooleanProperty} equationAccordionBoxExpandedProperty
- * @param {BooleanProperty} snapshotsAccordionBoxExpandedProperty
- * @param {Bounds2} layoutBounds
- * @param {Object} [options]
- * @constructor
- */
-function LabSceneNode( scene, sceneProperty, equationAccordionBoxExpandedProperty,
-                       snapshotsAccordionBoxExpandedProperty, layoutBounds, options ) {
+class LabSceneNode extends BasicsSceneNode {
 
-  options = merge( {
+  /**
+   * @param {LabScene} scene
+   * @param {Property.<Scene>} sceneProperty - the selected scene
+   * @param {BooleanProperty} equationAccordionBoxExpandedProperty
+   * @param {BooleanProperty} snapshotsAccordionBoxExpandedProperty
+   * @param {Bounds2} layoutBounds
+   * @param {Object} [options]
+   */
+  constructor( scene, sceneProperty, equationAccordionBoxExpandedProperty,
+               snapshotsAccordionBoxExpandedProperty, layoutBounds, options ) {
 
-    // BasicsSceneNode options
-    termsToolboxSpacing: 50, // horizontal spacing between terms in the toolbox
-    snapshotControlOptions: {
-      orientation: 'vertical',// put variable values below equations in Snapshots
-      controlHeight: 70, // height of each snapshot, a bit taller than default since values are below equations
-      commaSeparated: false,// don't separate variable values with commas in Snapshots
-      variableValuesOpacity: 0.75 // de-emphasize variable values in Snapshots
-    }
-  }, options );
+    options = merge( {
 
-  // @private whether the Variable accordion box is expanded or collapsed
-  this.valuesAccordionBoxExpandedProperty = new BooleanProperty( true );
+      // BasicsSceneNode options
+      termsToolboxSpacing: 50, // horizontal spacing between terms in the toolbox
+      snapshotControlOptions: {
+        orientation: 'vertical',// put variable values below equations in Snapshots
+        controlHeight: 70, // height of each snapshot, a bit taller than default since values are below equations
+        commaSeparated: false,// don't separate variable values with commas in Snapshots
+        variableValuesOpacity: 0.75 // de-emphasize variable values in Snapshots
+      }
+    }, options );
 
-  // @private whether variable values are visible in snapshots
-  this.variableValuesVisibleProperty = new BooleanProperty( true );
+    // whether the Values accordion box is expanded or collapsed
+    const valuesAccordionBoxExpandedProperty = new BooleanProperty( true );
 
-  assert && assert( !options.variableValuesVisibleProperty, 'LabSceneNode sets variableValuesVisibleProperty' );
-  options.variableValuesVisibleProperty = this.variableValuesVisibleProperty;
+    // whether variable values are visible in snapshots
+    const variableValuesVisibleProperty = new BooleanProperty( true );
 
-  BasicsSceneNode.call( this, scene, sceneProperty, equationAccordionBoxExpandedProperty,
-    snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
+    assert && assert( !options.variableValuesVisibleProperty, 'LabSceneNode sets variableValuesVisibleProperty' );
+    options.variableValuesVisibleProperty = variableValuesVisibleProperty;
 
-  // Values accordion box, above the Snapshots accordion box
-  const valuesAccordionBox = new VariablesAccordionBox( scene.variables, {
-    titleString: valuesString,
-    expandedProperty: this.valuesAccordionBoxExpandedProperty,
-    fixedWidth: this.snapshotsAccordionBox.width + 40, // wider so that pickers are usable size, see #3
-    right: this.snapshotsAccordionBox.right,
-    top: this.snapshotsAccordionBox.top
-  } );
-  this.addChild( valuesAccordionBox );
-  valuesAccordionBox.moveToBack();
+    super( scene, sceneProperty, equationAccordionBoxExpandedProperty,
+      snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
 
-  // shift the Snapshots accordion box down
-  this.snapshotsAccordionBox.top = valuesAccordionBox.bottom + 10;
+    // @private
+    this.valuesAccordionBoxExpandedProperty = valuesAccordionBoxExpandedProperty;
+    this.variableValuesVisibleProperty = variableValuesVisibleProperty;
+
+    // Values accordion box, above the Snapshots accordion box
+    const valuesAccordionBox = new VariablesAccordionBox( scene.variables, {
+      titleString: valuesString,
+      expandedProperty: valuesAccordionBoxExpandedProperty,
+      fixedWidth: this.snapshotsAccordionBox.width + 40, // wider so that pickers are usable size, see #3
+      right: this.snapshotsAccordionBox.right,
+      top: this.snapshotsAccordionBox.top
+    } );
+    this.addChild( valuesAccordionBox );
+    valuesAccordionBox.moveToBack();
+
+    // shift the Snapshots accordion box down
+    this.snapshotsAccordionBox.top = valuesAccordionBox.bottom + 10;
+  }
+
+  /**
+   * @public
+   */
+  reset() {
+    this.valuesAccordionBoxExpandedProperty.reset();
+    this.variableValuesVisibleProperty.reset();
+  }
 }
 
 equalityExplorerBasics.register( 'LabSceneNode', LabSceneNode );
 
-export default inherit( BasicsSceneNode, LabSceneNode, {
-
-  /**
-   * @public
-   * @override
-   */
-  reset: function() {
-    this.valuesAccordionBoxExpandedProperty.reset();
-    this.variableValuesVisibleProperty.reset();
-  }
-} );
+export default LabSceneNode;

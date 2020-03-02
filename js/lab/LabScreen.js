@@ -12,7 +12,6 @@ import squareImage from '../../../equality-explorer/images/square_png.js';
 import EqualityExplorerColors from '../../../equality-explorer/js/common/EqualityExplorerColors.js';
 import EqualityExplorerScreen from '../../../equality-explorer/js/common/EqualityExplorerScreen.js';
 import ScreenIcon from '../../../joist/js/ScreenIcon.js';
-import inherit from '../../../phet-core/js/inherit.js';
 import merge from '../../../phet-core/js/merge.js';
 import MathSymbols from '../../../scenery-phet/js/MathSymbols.js';
 import NumberPicker from '../../../scenery-phet/js/NumberPicker.js';
@@ -25,33 +24,34 @@ import equalityExplorerBasics from '../equalityExplorerBasics.js';
 import LabModel from './model/LabModel.js';
 import LabScreenView from './view/LabScreenView.js';
 
+// strings
 const screenLabString = equalityExplorerBasicsStrings.screen.lab;
 
 // constants
 const BACKGROUND_COLOR = EqualityExplorerColors.BASICS_SCREEN_BACKGROUND;
 
-/**
- * @param {Object} [options]
- * @constructor
- */
-function LabScreen( options ) {
+class LabScreen extends EqualityExplorerScreen {
 
-  options = merge( {
+  /**
+   * @param {Object} [options]
+   */
+  constructor( options ) {
 
-    // EqualityExplorerScreen options
-    name: screenLabString,
-    backgroundColorProperty: new Property( BACKGROUND_COLOR ),
-    homeScreenIcon: createScreenIcon()
-  }, options );
+    options = merge( {
 
-  EqualityExplorerScreen.call( this,
-    function() { return new LabModel(); },
-    function( model ) { return new LabScreenView( model ); },
-    options
-  );
+      // EqualityExplorerScreen options
+      name: screenLabString,
+      backgroundColorProperty: new Property( BACKGROUND_COLOR ),
+      homeScreenIcon: createScreenIcon()
+    }, options );
+
+    super(
+      () => new LabModel(),
+      model => new LabScreenView( model ),
+      options
+    );
+  }
 }
-
-equalityExplorerBasics.register( 'LabScreen', LabScreen );
 
 // Creates the icon for this screen: square = picker
 function createScreenIcon() {
@@ -79,5 +79,6 @@ function createScreenIcon() {
   } );
 }
 
-inherit( EqualityExplorerScreen, LabScreen );
+equalityExplorerBasics.register( 'LabScreen', LabScreen );
+
 export default LabScreen;

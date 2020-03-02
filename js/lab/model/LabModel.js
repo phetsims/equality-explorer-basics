@@ -7,18 +7,16 @@
  */
 
 import EqualityExplorerModel from '../../../../equality-explorer/js/common/model/EqualityExplorerModel.js';
-import inherit from '../../../../phet-core/js/inherit.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 import LabScene from './LabScene.js';
 
-/**
- * @constructor
- */
-function LabModel() {
-  EqualityExplorerModel.call( this, [ new LabScene() ] );
+class LabModel extends EqualityExplorerModel {
+
+  constructor() {
+    super( [ new LabScene() ] );
+  }
 }
 
 equalityExplorerBasics.register( 'LabModel', LabModel );
 
-inherit( EqualityExplorerModel, LabModel );
 export default LabModel;
