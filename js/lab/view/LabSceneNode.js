@@ -11,7 +11,7 @@ import BooleanProperty from '../../../../axon/js/BooleanProperty.js';
 import BasicsSceneNode from '../../../../equality-explorer/js/basics/view/BasicsSceneNode.js';
 import VariablesAccordionBox from '../../../../equality-explorer/js/common/view/VariablesAccordionBox.js';
 import merge from '../../../../phet-core/js/merge.js';
-import equalityExplorerBasicsStrings from '../../equality-explorer-basics-strings.js';
+import equalityExplorerBasicsStrings from '../../equalityExplorerBasicsStrings.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 
 const valuesString = equalityExplorerBasicsStrings.values;

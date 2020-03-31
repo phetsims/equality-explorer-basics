@@ -10,7 +10,7 @@ import BasicsScreen from '../../equality-explorer/js/basics/BasicsScreen.js';
 import EqualityExplorerConstants from '../../equality-explorer/js/common/EqualityExplorerConstants.js';
 import Sim from '../../joist/js/Sim.js';
 import SimLauncher from '../../joist/js/SimLauncher.js';
-import equalityExplorerBasicsStrings from './equality-explorer-basics-strings.js';
+import equalityExplorerBasicsStrings from './equalityExplorerBasicsStrings.js';
 import LabScreen from './lab/LabScreen.js';
 
 const equalityExplorerBasicsTitleString = equalityExplorerBasicsStrings[ 'equality-explorer-basics' ].title;

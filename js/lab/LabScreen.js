@@ -19,7 +19,7 @@ import PhetFont from '../../../scenery-phet/js/PhetFont.js';
 import HBox from '../../../scenery/js/nodes/HBox.js';
 import Image from '../../../scenery/js/nodes/Image.js';
 import Text from '../../../scenery/js/nodes/Text.js';
-import equalityExplorerBasicsStrings from '../equality-explorer-basics-strings.js';
+import equalityExplorerBasicsStrings from '../equalityExplorerBasicsStrings.js';
 import equalityExplorerBasics from '../equalityExplorerBasics.js';
 import LabModel from './model/LabModel.js';
 import LabScreenView from './view/LabScreenView.js';
