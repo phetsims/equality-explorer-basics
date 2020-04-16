@@ -13,11 +13,11 @@ import SimLauncher from '../../joist/js/SimLauncher.js';
 import equalityExplorerBasicsStrings from './equalityExplorerBasicsStrings.js';
 import LabScreen from './lab/LabScreen.js';
 
-const equalityExplorerBasicsTitleString = equalityExplorerBasicsStrings[ 'equality-explorer-basics' ].title;
-
 SimLauncher.launch( () => {
-  const sim = new Sim( equalityExplorerBasicsTitleString, [ new BasicsScreen(), new LabScreen() ], {
-    credits: EqualityExplorerConstants.CREDITS
-  } );
+  const sim = new Sim(
+    equalityExplorerBasicsStrings[ 'equality-explorer-basics' ].title,
+    [ new BasicsScreen(), new LabScreen() ], {
+      credits: EqualityExplorerConstants.CREDITS
+    } );
   sim.start();
 } );
