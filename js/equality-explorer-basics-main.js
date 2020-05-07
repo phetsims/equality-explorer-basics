@@ -9,11 +9,11 @@
 import BasicsScreen from '../../equality-explorer/js/basics/BasicsScreen.js';
 import EqualityExplorerConstants from '../../equality-explorer/js/common/EqualityExplorerConstants.js';
 import Sim from '../../joist/js/Sim.js';
-import SimLauncher from '../../joist/js/SimLauncher.js';
+import simLauncher from '../../joist/js/simLauncher.js';
 import equalityExplorerBasicsStrings from './equalityExplorerBasicsStrings.js';
 import LabScreen from './lab/LabScreen.js';
 
-SimLauncher.launch( () => {
+simLauncher.launch( () => {
   const sim = new Sim(
     equalityExplorerBasicsStrings[ 'equality-explorer-basics' ].title,
     [ new BasicsScreen(), new LabScreen() ], {
