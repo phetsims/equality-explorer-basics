@@ -34,7 +34,7 @@ class LabScreenView extends EqualityExplorerScreenView {
    * @override
    */
   createSceneNode( scene, sceneProperty, equationAccordionBoxExpandedProperty,
-                             snapshotsAccordionBoxExpandedProperty, layoutBounds, options ) {
+                   snapshotsAccordionBoxExpandedProperty, layoutBounds, options ) {
     return new LabSceneNode( scene, sceneProperty, equationAccordionBoxExpandedProperty,
       snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
   }
