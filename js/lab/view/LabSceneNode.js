@@ -32,9 +32,9 @@ class LabSceneNode extends BasicsSceneNode {
       // BasicsSceneNode options
       termsToolboxSpacing: 50, // horizontal spacing between terms in the toolbox
       snapshotControlOptions: {
-        orientation: 'vertical',// put variable values below equations in Snapshots
+        orientation: 'vertical', // put variable values below equations in Snapshots
         controlHeight: 70, // height of each snapshot, a bit taller than default since values are below equations
-        commaSeparated: false,// don't separate variable values with commas in Snapshots
+        commaSeparated: false, // don't separate variable values with commas in Snapshots
         variableValuesOpacity: 0.75 // de-emphasize variable values in Snapshots
       }
     }, options );
