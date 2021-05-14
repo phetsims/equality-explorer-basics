@@ -1,5 +1,5 @@
 {
-  "comment": "# equality-explorer-basics 1.0.13-rc.1 Mon May 10 2021 14:34:30 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# equality-explorer-basics 1.0.13-rc.2 Fri May 14 2021 03:42:45 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "928741cfc8fe804334d5b35292140314511f8678",
     "branch": "HEAD"
@@ -25,7 +25,7 @@
     "branch": "HEAD"
   },
   "equality-explorer-basics": {
-    "sha": "28226311f433cf4f841ee0def040f2247132545b",
+    "sha": "e4f50d61180d8cd287b85c86bc0aa00057289a19",
     "branch": "1.0"
   },
   "joist": {
@@ -62,7 +62,7 @@
   },
   "scenery": {
     "sha": "4534fff78a263496d2f885af6d3d79e58213aef4",
-    "branch": "equality-explorer-basics-1.0"
+    "branch": "HEAD"
   },
   "scenery-phet": {
     "sha": "38f2f97ba79297160b2cccedee2be6bc48732c28",
