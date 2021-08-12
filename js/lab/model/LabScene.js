@@ -7,14 +7,14 @@
  */
 
 import Range from '../../../../dot/js/Range.js';
-import sphereImage from '../../../../equality-explorer/images/sphere_png.js';
-import sphereShadowImage from '../../../../equality-explorer/images/sphereShadow_png.js';
-import squareImage from '../../../../equality-explorer/images/square_png.js';
-import squareShadowImage from '../../../../equality-explorer/images/squareShadow_png.js';
+import sphere_png from '../../../../equality-explorer/images/sphere_png.js';
+import sphereShadow_png from '../../../../equality-explorer/images/sphereShadow_png.js';
+import square_png from '../../../../equality-explorer/images/square_png.js';
+import squareShadow_png from '../../../../equality-explorer/images/squareShadow_png.js';
 import BasicsScene from '../../../../equality-explorer/js/basics/model/BasicsScene.js';
 import ObjectVariable from '../../../../equality-explorer/js/basics/model/ObjectVariable.js';
-import triangleImage from '../../../images/triangle_png.js';
-import triangleShadowImage from '../../../images/triangleShadow_png.js';
+import triangle_png from '../../../images/triangle_png.js';
+import triangleShadow_png from '../../../images/triangleShadow_png.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 
 // constants
@@ -27,15 +27,15 @@ class LabScene extends BasicsScene {
     const variables = [
 
       // name, image, shadow
-      new ObjectVariable( 'sphere', sphereImage, sphereShadowImage, {
+      new ObjectVariable( 'sphere', sphere_png, sphereShadow_png, {
         value: 1,
         range: VARIABLE_RANGE
       } ),
-      new ObjectVariable( 'square', squareImage, squareShadowImage, {
+      new ObjectVariable( 'square', square_png, squareShadow_png, {
         value: 2,
         range: VARIABLE_RANGE
       } ),
-      new ObjectVariable( 'triangle', triangleImage, triangleShadowImage, {
+      new ObjectVariable( 'triangle', triangle_png, triangleShadow_png, {
         value: 3,
         range: VARIABLE_RANGE
       } )

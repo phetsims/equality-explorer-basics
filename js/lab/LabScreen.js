@@ -8,7 +8,7 @@
 
 import Property from '../../../axon/js/Property.js';
 import Range from '../../../dot/js/Range.js';
-import squareImage from '../../../equality-explorer/images/square_png.js';
+import square_png from '../../../equality-explorer/images/square_png.js';
 import EqualityExplorerColors from '../../../equality-explorer/js/common/EqualityExplorerColors.js';
 import EqualityExplorerScreen from '../../../equality-explorer/js/common/EqualityExplorerScreen.js';
 import ScreenIcon from '../../../joist/js/ScreenIcon.js';
@@ -56,7 +56,7 @@ class LabScreen extends EqualityExplorerScreen {
 // Creates the icon for this screen: square = picker
 function createScreenIcon() {
 
-  const squareNode = new Image( squareImage, {
+  const squareNode = new Image( square_png, {
     scale: 0.75
   } );
 
