@@ -9,12 +9,12 @@ import equalityExplorerBasics from './equalityExplorerBasics.js';
 
 type StringsType = {
   'equality-explorer-basics': {
-    'title': string
-  },
+    'title': string;
+  };
   'screen': {
-    'lab': string
-  },
-  'values': string
+    'lab': string;
+  };
+  'values': string;
 };
 
 const equalityExplorerBasicsStrings = getStringModule( 'EQUALITY_EXPLORER_BASICS' ) as StringsType;
