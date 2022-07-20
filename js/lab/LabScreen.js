@@ -14,13 +14,11 @@ import EqualityExplorerScreen from '../../../equality-explorer/js/common/Equalit
 import ScreenIcon from '../../../joist/js/ScreenIcon.js';
 import merge from '../../../phet-core/js/merge.js';
 import MathSymbols from '../../../scenery-phet/js/MathSymbols.js';
-import NumberPicker from '../../../sun/js/NumberPicker.js';
 import PhetFont from '../../../scenery-phet/js/PhetFont.js';
-import { HBox } from '../../../scenery/js/imports.js';
-import { Image } from '../../../scenery/js/imports.js';
-import { Text } from '../../../scenery/js/imports.js';
-import equalityExplorerBasicsStrings from '../equalityExplorerBasicsStrings.js';
+import { HBox, Image, Text } from '../../../scenery/js/imports.js';
+import NumberPicker from '../../../sun/js/NumberPicker.js';
 import equalityExplorerBasics from '../equalityExplorerBasics.js';
+import equalityExplorerBasicsStrings from '../equalityExplorerBasicsStrings.js';
 import LabModel from './model/LabModel.js';
 import LabScreenView from './view/LabScreenView.js';
 
