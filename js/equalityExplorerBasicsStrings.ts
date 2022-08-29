@@ -11,14 +11,14 @@ import equalityExplorerBasics from './equalityExplorerBasics.js';
 type StringsType = {
   'equality-explorer-basics': {
     'title': string;
-    'titleProperty': TReadOnlyProperty<string>;
+    'titleStringProperty': TReadOnlyProperty<string>;
   };
   'screen': {
     'lab': string;
-    'labProperty': TReadOnlyProperty<string>;
+    'labStringProperty': TReadOnlyProperty<string>;
   };
   'values': string;
-  'valuesProperty': TReadOnlyProperty<string>;
+  'valuesStringProperty': TReadOnlyProperty<string>;
 };
 
 const equalityExplorerBasicsStrings = getStringModule( 'EQUALITY_EXPLORER_BASICS' ) as StringsType;
