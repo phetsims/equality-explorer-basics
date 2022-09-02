@@ -15,7 +15,7 @@ import LabScreen from './lab/LabScreen.js';
 
 simLauncher.launch( () => {
   const sim = new Sim(
-    equalityExplorerBasicsStrings[ 'equality-explorer-basics' ].title,
+    equalityExplorerBasicsStrings[ 'equality-explorer-basics' ].titleStringProperty,
     [ new BasicsScreen(), new LabScreen() ], {
       credits: EqualityExplorerConstants.CREDITS
     } );
