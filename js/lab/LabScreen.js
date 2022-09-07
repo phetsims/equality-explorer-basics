@@ -18,12 +18,12 @@ import PhetFont from '../../../scenery-phet/js/PhetFont.js';
 import { HBox, Image, Text } from '../../../scenery/js/imports.js';
 import NumberPicker from '../../../sun/js/NumberPicker.js';
 import equalityExplorerBasics from '../equalityExplorerBasics.js';
-import equalityExplorerBasicsStrings from '../equalityExplorerBasicsStrings.js';
+import EqualityExplorerBasicsStrings from '../EqualityExplorerBasicsStrings.js';
 import LabModel from './model/LabModel.js';
 import LabScreenView from './view/LabScreenView.js';
 
 // strings
-const screenLabString = equalityExplorerBasicsStrings.screen.lab;
+const screenLabString = EqualityExplorerBasicsStrings.screen.lab;
 
 // constants
 const BACKGROUND_COLOR = EqualityExplorerColors.BASICS_SCREEN_BACKGROUND;

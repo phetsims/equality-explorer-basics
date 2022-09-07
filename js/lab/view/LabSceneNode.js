@@ -12,7 +12,7 @@ import BasicsSceneNode from '../../../../equality-explorer/js/basics/view/Basics
 import VariablesAccordionBox from '../../../../equality-explorer/js/common/view/VariablesAccordionBox.js';
 import merge from '../../../../phet-core/js/merge.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
-import equalityExplorerBasicsStrings from '../../equalityExplorerBasicsStrings.js';
+import EqualityExplorerBasicsStrings from '../../EqualityExplorerBasicsStrings.js';
 
 class LabSceneNode extends BasicsSceneNode {
 
@@ -57,7 +57,7 @@ class LabSceneNode extends BasicsSceneNode {
 
     // Values accordion box, above the Snapshots accordion box
     const valuesAccordionBox = new VariablesAccordionBox( scene.variables, {
-      titleString: equalityExplorerBasicsStrings.values,
+      titleString: EqualityExplorerBasicsStrings.values,
       expandedProperty: valuesAccordionBoxExpandedProperty,
       fixedWidth: this.snapshotsAccordionBox.width + 40, // wider so that pickers are usable size, see #3
       right: this.snapshotsAccordionBox.right,

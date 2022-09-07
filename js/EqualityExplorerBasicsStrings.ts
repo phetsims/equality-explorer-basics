@@ -21,8 +21,8 @@ type StringsType = {
   'valuesStringProperty': TReadOnlyProperty<string>;
 };
 
-const equalityExplorerBasicsStrings = getStringModule( 'EQUALITY_EXPLORER_BASICS' ) as StringsType;
+const EqualityExplorerBasicsStrings = getStringModule( 'EQUALITY_EXPLORER_BASICS' ) as StringsType;
 
-equalityExplorerBasics.register( 'equalityExplorerBasicsStrings', equalityExplorerBasicsStrings );
+equalityExplorerBasics.register( 'EqualityExplorerBasicsStrings', EqualityExplorerBasicsStrings );
 
-export default equalityExplorerBasicsStrings;
+export default EqualityExplorerBasicsStrings;
