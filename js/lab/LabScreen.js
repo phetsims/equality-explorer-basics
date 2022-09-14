@@ -22,9 +22,6 @@ import EqualityExplorerBasicsStrings from '../EqualityExplorerBasicsStrings.js';
 import LabModel from './model/LabModel.js';
 import LabScreenView from './view/LabScreenView.js';
 
-// strings
-const screenLabString = EqualityExplorerBasicsStrings.screen.lab;
-
 // constants
 const BACKGROUND_COLOR = EqualityExplorerColors.BASICS_SCREEN_BACKGROUND;
 
@@ -38,7 +35,7 @@ class LabScreen extends EqualityExplorerScreen {
     options = merge( {
 
       // EqualityExplorerScreen options
-      name: screenLabString,
+      name: EqualityExplorerBasicsStrings.screen.labStringProperty,
       backgroundColorProperty: new Property( BACKGROUND_COLOR ),
       homeScreenIcon: createScreenIcon()
     }, options );
