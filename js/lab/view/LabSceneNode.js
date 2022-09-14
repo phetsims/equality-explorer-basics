@@ -57,7 +57,7 @@ class LabSceneNode extends BasicsSceneNode {
 
     // Values accordion box, above the Snapshots accordion box
     const valuesAccordionBox = new VariablesAccordionBox( scene.variables, {
-      titleString: EqualityExplorerBasicsStrings.values,
+      titleStringProperty: EqualityExplorerBasicsStrings.valuesStringProperty,
       expandedProperty: valuesAccordionBoxExpandedProperty,
       fixedWidth: this.snapshotsAccordionBox.width + 40, // wider so that pickers are usable size, see #3
       right: this.snapshotsAccordionBox.right,
