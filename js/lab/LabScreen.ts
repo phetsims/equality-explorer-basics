@@ -1,6 +1,5 @@
 // Copyright 2018-2022, University of Colorado Boulder
 
-// @ts-nocheck
 /**
  * The 'Lab' screen.
  *
@@ -11,9 +10,10 @@ import Property from '../../../axon/js/Property.js';
 import Range from '../../../dot/js/Range.js';
 import square_png from '../../../equality-explorer/images/square_png.js';
 import EqualityExplorerColors from '../../../equality-explorer/js/common/EqualityExplorerColors.js';
-import EqualityExplorerScreen from '../../../equality-explorer/js/common/EqualityExplorerScreen.js';
+import EqualityExplorerScreen, { EqualityExplorerScreenOptions } from '../../../equality-explorer/js/common/EqualityExplorerScreen.js';
 import ScreenIcon from '../../../joist/js/ScreenIcon.js';
-import merge from '../../../phet-core/js/merge.js';
+import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js';
+import PickRequired from '../../../phet-core/js/types/PickRequired.js';
 import MathSymbols from '../../../scenery-phet/js/MathSymbols.js';
 import PhetFont from '../../../scenery-phet/js/PhetFont.js';
 import { HBox, Image, Text } from '../../../scenery/js/imports.js';
@@ -26,20 +26,21 @@ import LabScreenView from './view/LabScreenView.js';
 // constants
 const BACKGROUND_COLOR = EqualityExplorerColors.BASICS_SCREEN_BACKGROUND;
 
-class LabScreen extends EqualityExplorerScreen {
+type SelfOptions = EmptySelfOptions;
 
-  /**
-   * @param {Object} [options]
-   */
-  constructor( options ) {
+type LabScreenOptions = SelfOptions & PickRequired<EqualityExplorerScreenOptions, 'tandem'>;
 
-    options = merge( {
+export default class LabScreen extends EqualityExplorerScreen<LabModel, LabScreenView> {
 
-      // EqualityExplorerScreen options
+  public constructor( providedOptions: LabScreenOptions ) {
+
+    const options = optionize<LabScreenOptions, SelfOptions, EqualityExplorerScreenOptions>()( {
+
+      // EqualityExplorerScreenOptions
       name: EqualityExplorerBasicsStrings.screen.labStringProperty,
       backgroundColorProperty: new Property( BACKGROUND_COLOR ),
       homeScreenIcon: createScreenIcon()
-    }, options );
+    }, providedOptions );
 
     super(
       () => new LabModel(),
@@ -50,7 +51,7 @@ class LabScreen extends EqualityExplorerScreen {
 }
 
 // Creates the icon for this screen: square = picker
-function createScreenIcon() {
+function createScreenIcon(): ScreenIcon {
 
   const squareNode = new Image( square_png, {
     scale: 0.75
@@ -76,5 +77,3 @@ function createScreenIcon() {
 }
 
 equalityExplorerBasics.register( 'LabScreen', LabScreen );
-
-export default LabScreen;
