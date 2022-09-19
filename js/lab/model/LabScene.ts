@@ -1,6 +1,5 @@
 // Copyright 2018-2021, University of Colorado Boulder
 
-// @ts-nocheck
 /**
  * The sole scene in the 'Lab' screen.
  *
@@ -23,7 +22,7 @@ const VARIABLE_RANGE = new Range( 1, 20 );
 
 export default class LabScene extends BasicsScene {
 
-  constructor() {
+  public constructor() {
 
     const variables = [
 
