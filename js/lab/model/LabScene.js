@@ -20,7 +20,7 @@ import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 // constants
 const VARIABLE_RANGE = new Range( 1, 20 );
 
-class LabScene extends BasicsScene {
+export default class LabScene extends BasicsScene {
 
   constructor() {
 
@@ -49,5 +49,3 @@ class LabScene extends BasicsScene {
 }
 
 equalityExplorerBasics.register( 'LabScene', LabScene );
-
-export default LabScene;

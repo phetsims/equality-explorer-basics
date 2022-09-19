@@ -14,7 +14,7 @@ import merge from '../../../../phet-core/js/merge.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 import EqualityExplorerBasicsStrings from '../../EqualityExplorerBasicsStrings.js';
 
-class LabSceneNode extends BasicsSceneNode {
+export default class LabSceneNode extends BasicsSceneNode {
 
   /**
    * @param {LabScene} scene
@@ -80,5 +80,3 @@ class LabSceneNode extends BasicsSceneNode {
 }
 
 equalityExplorerBasics.register( 'LabSceneNode', LabSceneNode );
-
-export default LabSceneNode;

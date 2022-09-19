@@ -10,7 +10,7 @@ import EqualityExplorerScreenView from '../../../../equality-explorer/js/common/
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 import LabSceneNode from './LabSceneNode.js';
 
-class LabScreenView extends EqualityExplorerScreenView {
+export default class LabScreenView extends EqualityExplorerScreenView {
 
   /**
    * @param {LabModel} model
@@ -42,5 +42,3 @@ class LabScreenView extends EqualityExplorerScreenView {
 }
 
 equalityExplorerBasics.register( 'LabScreenView', LabScreenView );
-
-export default LabScreenView;
