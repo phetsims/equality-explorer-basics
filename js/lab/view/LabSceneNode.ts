@@ -1,6 +1,5 @@
 // Copyright 2018-2022, University of Colorado Boulder
 
-// @ts-nocheck
 /**
  * View of a scene in the 'Lab' screen.
  * Same as the 'Basics' screen, but with controls for changing the values of object types.
@@ -9,28 +8,36 @@
  */
 
 import BooleanProperty from '../../../../axon/js/BooleanProperty.js';
-import BasicsSceneNode from '../../../../equality-explorer/js/basics/view/BasicsSceneNode.js';
+import Property from '../../../../axon/js/Property.js';
+import TProperty from '../../../../axon/js/TProperty.js';
+import Bounds2 from '../../../../dot/js/Bounds2.js';
+import BasicsSceneNode, { BasicsSceneNodeOptions } from '../../../../equality-explorer/js/basics/view/BasicsSceneNode.js';
 import VariablesAccordionBox from '../../../../equality-explorer/js/common/view/VariablesAccordionBox.js';
-import merge from '../../../../phet-core/js/merge.js';
+import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
+import StrictOmit from '../../../../phet-core/js/types/StrictOmit.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 import EqualityExplorerBasicsStrings from '../../EqualityExplorerBasicsStrings.js';
+import LabScene from '../model/LabScene.js';
+
+type SelfOptions = EmptySelfOptions;
+
+type LabSceneNodeOptions = SelfOptions & StrictOmit<BasicsSceneNodeOptions, 'variableValuesVisibleProperty'>;
 
 export default class LabSceneNode extends BasicsSceneNode {
 
-  /**
-   * @param {LabScene} scene
-   * @param {Property.<Scene>} sceneProperty - the selected scene
-   * @param {BooleanProperty} equationAccordionBoxExpandedProperty
-   * @param {BooleanProperty} snapshotsAccordionBoxExpandedProperty
-   * @param {Bounds2} layoutBounds
-   * @param {Object} [options]
-   */
-  constructor( scene, sceneProperty, equationAccordionBoxExpandedProperty,
-               snapshotsAccordionBoxExpandedProperty, layoutBounds, options ) {
+  private readonly valuesAccordionBoxExpandedProperty: Property<boolean>;
+  private readonly variableValuesVisibleProperty: Property<boolean>;
 
-    options = merge( {
+  public constructor( scene: LabScene,
+                      sceneProperty: Property<LabScene>,
+                      equationAccordionBoxExpandedProperty: TProperty<boolean>,
+                      snapshotsAccordionBoxExpandedProperty: TProperty<boolean>,
+                      layoutBounds: Bounds2,
+                      providedOptions?: LabSceneNodeOptions ) {
 
-      // BasicsSceneNode options
+    const options = optionize<LabSceneNodeOptions, SelfOptions, BasicsSceneNodeOptions>()( {
+
+      // BasicsSceneNodeOptions
       termsToolboxSpacing: 50, // horizontal spacing between terms in the toolbox
       snapshotControlOptions: {
         orientation: 'vertical', // put variable values below equations in Snapshots
@@ -38,26 +45,26 @@ export default class LabSceneNode extends BasicsSceneNode {
         commaSeparated: false, // don't separate variable values with commas in Snapshots
         variableValuesOpacity: 0.75 // de-emphasize variable values in Snapshots
       }
-    }, options );
+    }, providedOptions );
 
     // whether the Values accordion box is expanded or collapsed
     const valuesAccordionBoxExpandedProperty = new BooleanProperty( true );
 
     // whether variable values are visible in snapshots
     const variableValuesVisibleProperty = new BooleanProperty( true );
-
-    assert && assert( !options.variableValuesVisibleProperty, 'LabSceneNode sets variableValuesVisibleProperty' );
     options.variableValuesVisibleProperty = variableValuesVisibleProperty;
 
     super( scene, sceneProperty, equationAccordionBoxExpandedProperty,
       snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
 
-    // @private
     this.valuesAccordionBoxExpandedProperty = valuesAccordionBoxExpandedProperty;
     this.variableValuesVisibleProperty = variableValuesVisibleProperty;
 
+    const variables = scene.variables!;
+    assert && assert( variables );
+
     // Values accordion box, above the Snapshots accordion box
-    const valuesAccordionBox = new VariablesAccordionBox( scene.variables, {
+    const valuesAccordionBox = new VariablesAccordionBox( variables, {
       titleStringProperty: EqualityExplorerBasicsStrings.valuesStringProperty,
       expandedProperty: valuesAccordionBoxExpandedProperty,
       fixedWidth: this.snapshotsAccordionBox.width + 40, // wider so that pickers are usable size, see #3
@@ -71,10 +78,12 @@ export default class LabSceneNode extends BasicsSceneNode {
     this.snapshotsAccordionBox.top = valuesAccordionBox.bottom + 10;
   }
 
-  /**
-   * @public
-   */
-  reset() {
+  public override dispose(): void {
+    assert && assert( false, 'dispose is not supported, exists for the lifetime of the sim' );
+    super.dispose();
+  }
+
+  public reset(): void {
     this.valuesAccordionBoxExpandedProperty.reset();
     this.variableValuesVisibleProperty.reset();
   }
