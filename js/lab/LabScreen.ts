@@ -44,7 +44,7 @@ export default class LabScreen extends EqualityExplorerScreen<LabModel, LabScree
 
     super(
       () => new LabModel( options.tandem.createTandem( 'model' ) ),
-      model => new LabScreenView( model ),
+      model => new LabScreenView( model, options.tandem.createTandem( 'view' ) ),
       options
     );
   }
