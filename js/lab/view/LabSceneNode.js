@@ -1,5 +1,6 @@
 // Copyright 2018-2022, University of Colorado Boulder
 
+// @ts-nocheck
 /**
  * View of a scene in the 'Lab' screen.
  * Same as the 'Basics' screen, but with controls for changing the values of object types.
