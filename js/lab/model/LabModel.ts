@@ -7,13 +7,14 @@
  */
 
 import EqualityExplorerModel from '../../../../equality-explorer/js/common/model/EqualityExplorerModel.js';
+import Tandem from '../../../../tandem/js/Tandem.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 import LabScene from './LabScene.js';
 
 export default class LabModel extends EqualityExplorerModel<LabScene> {
 
-  public constructor() {
-    super( [ new LabScene() ] );
+  public constructor( tandem: Tandem ) {
+    super( [ new LabScene() ], tandem );
   }
 }
 
