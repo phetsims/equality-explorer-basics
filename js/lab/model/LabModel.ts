@@ -1,6 +1,5 @@
 // Copyright 2018-2020, University of Colorado Boulder
 
-// @ts-nocheck
 /**
  * Model for the 'Lab' screen.
  *
@@ -11,13 +10,11 @@ import EqualityExplorerModel from '../../../../equality-explorer/js/common/model
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 import LabScene from './LabScene.js';
 
-class LabModel extends EqualityExplorerModel {
+export default class LabModel extends EqualityExplorerModel<LabScene> {
 
-  constructor() {
+  public constructor() {
     super( [ new LabScene() ] );
   }
 }
 
 equalityExplorerBasics.register( 'LabModel', LabModel );
-
-export default LabModel;
