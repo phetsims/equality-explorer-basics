@@ -11,7 +11,7 @@ import Tandem from '../../../../tandem/js/Tandem.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 import LabScene from './LabScene.js';
 
-export default class LabModel extends EqualityExplorerModel<LabScene> {
+export default class LabModel extends EqualityExplorerModel {
 
   public constructor( tandem: Tandem ) {
     super( [ new LabScene() ], tandem );
