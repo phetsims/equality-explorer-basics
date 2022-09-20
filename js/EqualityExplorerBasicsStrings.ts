@@ -10,14 +10,11 @@ import equalityExplorerBasics from './equalityExplorerBasics.js';
 
 type StringsType = {
   'equality-explorer-basics': {
-    'title': string;
     'titleStringProperty': TReadOnlyProperty<string>;
   };
   'screen': {
-    'lab': string;
     'labStringProperty': TReadOnlyProperty<string>;
   };
-  'values': string;
   'valuesStringProperty': TReadOnlyProperty<string>;
 };
 
