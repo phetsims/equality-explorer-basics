@@ -9,7 +9,6 @@
 
 import BooleanProperty from '../../../../axon/js/BooleanProperty.js';
 import Property from '../../../../axon/js/Property.js';
-import TProperty from '../../../../axon/js/TProperty.js';
 import Bounds2 from '../../../../dot/js/Bounds2.js';
 import BasicsSceneNode, { BasicsSceneNodeOptions } from '../../../../equality-explorer/js/basics/view/BasicsSceneNode.js';
 import VariablesAccordionBox from '../../../../equality-explorer/js/common/view/VariablesAccordionBox.js';
@@ -30,8 +29,8 @@ export default class LabSceneNode extends BasicsSceneNode {
 
   public constructor( scene: LabScene,
                       sceneProperty: Property<LabScene>,
-                      equationAccordionBoxExpandedProperty: TProperty<boolean>,
-                      snapshotsAccordionBoxExpandedProperty: TProperty<boolean>,
+                      equationAccordionBoxExpandedProperty: Property<boolean>,
+                      snapshotsAccordionBoxExpandedProperty: Property<boolean>,
                       layoutBounds: Bounds2,
                       providedOptions?: LabSceneNodeOptions ) {
 
