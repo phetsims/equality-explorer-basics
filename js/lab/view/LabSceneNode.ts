@@ -82,9 +82,10 @@ export default class LabSceneNode extends BasicsSceneNode {
     super.dispose();
   }
 
-  public reset(): void {
+  public override reset(): void {
     this.valuesAccordionBoxExpandedProperty.reset();
     this.variableValuesVisibleProperty.reset();
+    super.reset();
   }
 }
 

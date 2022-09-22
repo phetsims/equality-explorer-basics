@@ -9,12 +9,12 @@
 import EqualityExplorerScreenView from '../../../../equality-explorer/js/common/view/EqualityExplorerScreenView.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 import LabSceneNode, { LabSceneNodeOptions } from './LabSceneNode.js';
-import { Node } from '../../../../scenery/js/imports.js';
 import Property from '../../../../axon/js/Property.js';
 import EqualityExplorerScene from '../../../../equality-explorer/js/common/model/EqualityExplorerScene.js';
 import Bounds2 from '../../../../dot/js/Bounds2.js';
 import LabModel from '../model/LabModel.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
+import EqualityExplorerSceneNode from '../../../../equality-explorer/js/common/view/EqualityExplorerSceneNode.js';
 
 export default class LabScreenView extends EqualityExplorerScreenView {
 
@@ -32,7 +32,7 @@ export default class LabScreenView extends EqualityExplorerScreenView {
                                    equationAccordionBoxExpandedProperty: Property<boolean>,
                                    snapshotsAccordionBoxExpandedProperty: Property<boolean>,
                                    layoutBounds: Bounds2,
-                                   providedOptions?: LabSceneNodeOptions ): Node {
+                                   providedOptions?: LabSceneNodeOptions ): EqualityExplorerSceneNode {
     return new LabSceneNode( scene, sceneProperty, equationAccordionBoxExpandedProperty,
       snapshotsAccordionBoxExpandedProperty, layoutBounds, providedOptions );
   }
