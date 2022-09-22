@@ -20,7 +20,7 @@ import LabScene from '../model/LabScene.js';
 
 type SelfOptions = EmptySelfOptions;
 
-type LabSceneNodeOptions = SelfOptions & StrictOmit<BasicsSceneNodeOptions, 'variableValuesVisibleProperty'>;
+export type LabSceneNodeOptions = SelfOptions & StrictOmit<BasicsSceneNodeOptions, 'variableValuesVisibleProperty'>;
 
 export default class LabSceneNode extends BasicsSceneNode {
 
