@@ -50,7 +50,9 @@ export default class LabScreen extends EqualityExplorerScreen<LabModel, LabScree
   }
 }
 
-// Creates the icon for this screen: square = picker
+/**
+ * Creates the icon for this screen: square = picker
+ */
 function createScreenIcon(): ScreenIcon {
 
   const squareNode = new Image( square_png, {
