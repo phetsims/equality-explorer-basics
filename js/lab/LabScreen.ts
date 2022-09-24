@@ -59,7 +59,7 @@ function createScreenIcon(): ScreenIcon {
     scale: 0.75
   } );
 
-  const equalsNode = new Text( MathSymbols.EQUAL_TO, {
+  const equalsText = new Text( MathSymbols.EQUAL_TO, {
     font: new PhetFont( { size: 30, weight: 'bold' } )
   } );
 
@@ -69,7 +69,7 @@ function createScreenIcon(): ScreenIcon {
 
   const iconNode = new HBox( {
     spacing: 5,
-    children: [ squareNode, equalsNode, pickerNode ]
+    children: [ squareNode, equalsText, pickerNode ]
   } );
 
   return new ScreenIcon( iconNode, {
