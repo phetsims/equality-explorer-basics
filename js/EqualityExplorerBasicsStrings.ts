@@ -5,17 +5,17 @@
  */
 /* eslint-disable */
 import getStringModule from '../../chipper/js/getStringModule.js';
-import TReadOnlyProperty from '../../axon/js/TReadOnlyProperty.js';
+import LinkableProperty from '../../axon/js/LinkableProperty.js';
 import equalityExplorerBasics from './equalityExplorerBasics.js';
 
 type StringsType = {
   'equality-explorer-basics': {
-    'titleStringProperty': TReadOnlyProperty<string>;
+    'titleStringProperty': LinkableProperty<string>;
   };
   'screen': {
-    'labStringProperty': TReadOnlyProperty<string>;
+    'labStringProperty': LinkableProperty<string>;
   };
-  'valuesStringProperty': TReadOnlyProperty<string>;
+  'valuesStringProperty': LinkableProperty<string>;
 };
 
 const EqualityExplorerBasicsStrings = getStringModule( 'EQUALITY_EXPLORER_BASICS' ) as StringsType;
