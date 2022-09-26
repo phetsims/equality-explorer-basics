@@ -14,14 +14,11 @@ import EqualityExplorerScene from '../../../../equality-explorer/js/common/model
 import Bounds2 from '../../../../dot/js/Bounds2.js';
 import LabModel from '../model/LabModel.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import EqualityExplorerSceneNode from '../../../../equality-explorer/js/common/view/EqualityExplorerSceneNode.js';
 
 export default class LabScreenView extends EqualityExplorerScreenView {
 
   public constructor( model: LabModel, tandem: Tandem ) {
-    super( model, tandem, {
-      hasNegativeTermsInToolbox: false // only positive terms in the toolbox
-    } );
+    super( model, tandem );
   }
 
   /**
@@ -31,7 +28,7 @@ export default class LabScreenView extends EqualityExplorerScreenView {
                                       equationAccordionBoxExpandedProperty: Property<boolean>,
                                       snapshotsAccordionBoxExpandedProperty: Property<boolean>,
                                       layoutBounds: Bounds2,
-                                      providedOptions?: LabSceneNodeOptions ): EqualityExplorerSceneNode {
+                                      providedOptions?: LabSceneNodeOptions ): LabSceneNode {
     return new LabSceneNode( scene, equationAccordionBoxExpandedProperty,
       snapshotsAccordionBoxExpandedProperty, layoutBounds, providedOptions );
   }
