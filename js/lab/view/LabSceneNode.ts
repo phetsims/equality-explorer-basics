@@ -28,7 +28,6 @@ export default class LabSceneNode extends BasicsSceneNode {
   private readonly variableValuesVisibleProperty: Property<boolean>;
 
   public constructor( scene: LabScene,
-                      sceneProperty: Property<LabScene>,
                       equationAccordionBoxExpandedProperty: Property<boolean>,
                       snapshotsAccordionBoxExpandedProperty: Property<boolean>,
                       layoutBounds: Bounds2,
@@ -53,8 +52,7 @@ export default class LabSceneNode extends BasicsSceneNode {
     const variableValuesVisibleProperty = new BooleanProperty( true );
     options.variableValuesVisibleProperty = variableValuesVisibleProperty;
 
-    super( scene, sceneProperty, equationAccordionBoxExpandedProperty,
-      snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
+    super( scene, equationAccordionBoxExpandedProperty, snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
 
     this.valuesAccordionBoxExpandedProperty = valuesAccordionBoxExpandedProperty;
     this.variableValuesVisibleProperty = variableValuesVisibleProperty;
