@@ -42,7 +42,7 @@ export default class LabScene extends BasicsScene {
     ];
 
     super( variables, {
-      debugName: 'lab',
+      tandemNamePrefix: 'lab',
       numberOfSnapshots: 4 // fewer snapshots in this screen because we're short on vertical space
     } );
   }
