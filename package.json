@@ -18,6 +18,9 @@
     ],
     "runnable": true,
     "simulation": true,
+    "phet-io": {
+      "validation": false
+    },
     "supportedBrands": [
       "phet",
       "phet-io",
