@@ -14,7 +14,8 @@ import LabScene from './LabScene.js';
 export default class LabModel extends EqualityExplorerModel {
 
   public constructor( tandem: Tandem ) {
-    super( [ new LabScene() ], tandem );
+    //TODO these tandem names should somehow use tandemNamePrefix
+    super( [ new LabScene( tandem.createTandem( 'labScene' ) ) ], tandem );
   }
 }
 

@@ -16,13 +16,14 @@ import ObjectVariable from '../../../../equality-explorer/js/basics/model/Object
 import triangle_png from '../../../images/triangle_png.js';
 import triangleShadow_png from '../../../images/triangleShadow_png.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
+import Tandem from '../../../../tandem/js/Tandem.js';
 
 // constants
 const VARIABLE_RANGE = new Range( 1, 20 );
 
 export default class LabScene extends BasicsScene {
 
-  public constructor() {
+  public constructor( tandem: Tandem ) {
 
     const variables = [
 
@@ -42,8 +43,9 @@ export default class LabScene extends BasicsScene {
     ];
 
     super( variables, {
+      numberOfSnapshots: 4, // fewer snapshots in this screen because we're short on vertical space
       tandemNamePrefix: 'lab',
-      numberOfSnapshots: 4 // fewer snapshots in this screen because we're short on vertical space
+      tandem: tandem
     } );
   }
 }
