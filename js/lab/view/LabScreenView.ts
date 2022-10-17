@@ -28,7 +28,7 @@ export default class LabScreenView extends EqualityExplorerScreenView {
                                       equationAccordionBoxExpandedProperty: Property<boolean>,
                                       snapshotsAccordionBoxExpandedProperty: Property<boolean>,
                                       layoutBounds: Bounds2,
-                                      providedOptions?: LabSceneNodeOptions ): LabSceneNode {
+                                      providedOptions: LabSceneNodeOptions ): LabSceneNode {
     return new LabSceneNode( scene, equationAccordionBoxExpandedProperty,
       snapshotsAccordionBoxExpandedProperty, layoutBounds, providedOptions );
   }

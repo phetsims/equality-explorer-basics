@@ -31,7 +31,7 @@ export default class LabSceneNode extends BasicsSceneNode {
                       equationAccordionBoxExpandedProperty: Property<boolean>,
                       snapshotsAccordionBoxExpandedProperty: Property<boolean>,
                       layoutBounds: Bounds2,
-                      providedOptions?: LabSceneNodeOptions ) {
+                      providedOptions: LabSceneNodeOptions ) {
 
     const options = optionize<LabSceneNodeOptions, SelfOptions, BasicsSceneNodeOptions>()( {
 
