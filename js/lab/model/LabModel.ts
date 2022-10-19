@@ -14,7 +14,12 @@ import LabScene from './LabScene.js';
 export default class LabModel extends EqualityExplorerModel {
 
   public constructor( tandem: Tandem ) {
-    super( [ new LabScene( tandem.createTandem( 'labScene' ) ) ], tandem );
+
+    const scenes = [
+      new LabScene( tandem.createTandem( 'labScene' ) )
+    ];
+
+    super( scenes, tandem );
   }
 }
 
