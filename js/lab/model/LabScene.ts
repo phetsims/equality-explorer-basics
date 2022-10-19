@@ -25,20 +25,38 @@ export default class LabScene extends BasicsScene {
 
   public constructor( tandem: Tandem ) {
 
+    const variablesTandem = tandem.createTandem( 'variables' );
+
     const variables = [
 
-      // name, image, shadow
-      new ObjectVariable( 'sphere', sphere_png, sphereShadow_png, {
+      // sphere
+      new ObjectVariable( {
+        symbol: 'sphere',
+        image: sphere_png,
+        shadow: sphereShadow_png,
         value: 1,
-        range: VARIABLE_RANGE
+        range: VARIABLE_RANGE,
+        tandem: variablesTandem.createTandem( 'sphereVariable' )
       } ),
-      new ObjectVariable( 'square', square_png, squareShadow_png, {
+
+      // square
+      new ObjectVariable( {
+        symbol: 'square',
+        image: square_png,
+        shadow: squareShadow_png,
         value: 2,
-        range: VARIABLE_RANGE
+        range: VARIABLE_RANGE,
+        tandem: variablesTandem.createTandem( 'squareVariable' )
       } ),
-      new ObjectVariable( 'triangle', triangle_png, triangleShadow_png, {
+
+      // triangle
+      new ObjectVariable( {
+        symbol: 'triangle',
+        image: triangle_png,
+        shadow: triangleShadow_png,
         value: 3,
-        range: VARIABLE_RANGE
+        range: VARIABLE_RANGE,
+        tandem: variablesTandem.createTandem( 'triangleVariable' )
       } )
     ];
 
