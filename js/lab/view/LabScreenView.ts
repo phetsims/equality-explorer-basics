@@ -14,6 +14,7 @@ import EqualityExplorerScene from '../../../../equality-explorer/js/common/model
 import Bounds2 from '../../../../dot/js/Bounds2.js';
 import LabModel from '../model/LabModel.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
+import OopsDialog from '../../../../scenery-phet/js/OopsDialog.js';
 
 export default class LabScreenView extends EqualityExplorerScreenView {
 
@@ -28,9 +29,10 @@ export default class LabScreenView extends EqualityExplorerScreenView {
                                       equationAccordionBoxExpandedProperty: Property<boolean>,
                                       snapshotsAccordionBoxExpandedProperty: Property<boolean>,
                                       layoutBounds: Bounds2,
+                                      numberTooBigDialog: OopsDialog,
                                       providedOptions: LabSceneNodeOptions ): LabSceneNode {
     return new LabSceneNode( scene, equationAccordionBoxExpandedProperty,
-      snapshotsAccordionBoxExpandedProperty, layoutBounds, providedOptions );
+      snapshotsAccordionBoxExpandedProperty, layoutBounds, numberTooBigDialog, providedOptions );
   }
 }
 

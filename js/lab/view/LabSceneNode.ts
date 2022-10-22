@@ -14,6 +14,7 @@ import BasicsSceneNode, { BasicsSceneNodeOptions } from '../../../../equality-ex
 import VariablesAccordionBox from '../../../../equality-explorer/js/common/view/VariablesAccordionBox.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 import StrictOmit from '../../../../phet-core/js/types/StrictOmit.js';
+import OopsDialog from '../../../../scenery-phet/js/OopsDialog.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 import EqualityExplorerBasicsStrings from '../../EqualityExplorerBasicsStrings.js';
 import LabScene from '../model/LabScene.js';
@@ -31,6 +32,7 @@ export default class LabSceneNode extends BasicsSceneNode {
                       equationAccordionBoxExpandedProperty: Property<boolean>,
                       snapshotsAccordionBoxExpandedProperty: Property<boolean>,
                       layoutBounds: Bounds2,
+                      numberTooBigDialog: OopsDialog,
                       providedOptions: LabSceneNodeOptions ) {
 
     const options = optionize<LabSceneNodeOptions, SelfOptions, BasicsSceneNodeOptions>()( {
@@ -56,7 +58,8 @@ export default class LabSceneNode extends BasicsSceneNode {
     } );
     options.variableValuesVisibleProperty = variableValuesVisibleProperty;
 
-    super( scene, equationAccordionBoxExpandedProperty, snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
+    super( scene, equationAccordionBoxExpandedProperty, snapshotsAccordionBoxExpandedProperty, layoutBounds,
+      numberTooBigDialog, options );
 
     this.valuesAccordionBoxExpandedProperty = valuesAccordionBoxExpandedProperty;
     this.variableValuesVisibleProperty = variableValuesVisibleProperty;
