@@ -46,10 +46,14 @@ export default class LabSceneNode extends BasicsSceneNode {
     }, providedOptions );
 
     // whether the Values accordion box is expanded or collapsed
-    const valuesAccordionBoxExpandedProperty = new BooleanProperty( true );
+    const valuesAccordionBoxExpandedProperty = new BooleanProperty( true, {
+      tandem: options.tandem.createTandem( 'valuesAccordionBoxExpandedProperty' )
+    } );
 
     // whether variable values are visible in snapshots
-    const variableValuesVisibleProperty = new BooleanProperty( true );
+    const variableValuesVisibleProperty = new BooleanProperty( true, {
+      tandem: options.tandem.createTandem( 'variableValuesVisibleProperty' )
+    } );
     options.variableValuesVisibleProperty = variableValuesVisibleProperty;
 
     super( scene, equationAccordionBoxExpandedProperty, snapshotsAccordionBoxExpandedProperty, layoutBounds, options );
@@ -58,7 +62,7 @@ export default class LabSceneNode extends BasicsSceneNode {
     this.variableValuesVisibleProperty = variableValuesVisibleProperty;
 
     const variables = scene.variables!;
-    assert && assert( variables );
+    assert && assert( variables && variables.length > 0 );
 
     // Values accordion box, above the Snapshots accordion box
     const valuesAccordionBox = new VariablesAccordionBox( variables, {
@@ -66,13 +70,22 @@ export default class LabSceneNode extends BasicsSceneNode {
       expandedProperty: valuesAccordionBoxExpandedProperty,
       fixedWidth: this.snapshotsAccordionBox.width + 40, // wider so that pickers are usable size, see #3
       right: this.snapshotsAccordionBox.right,
-      top: this.snapshotsAccordionBox.top
+      top: this.snapshotsAccordionBox.top,
+      tandem: options.tandem.createTandem( 'variablesAccordionBox' )
     } );
     this.addChild( valuesAccordionBox );
     valuesAccordionBox.moveToBack();
 
-    // shift the Snapshots accordion box down
-    this.snapshotsAccordionBox.top = valuesAccordionBox.bottom + 10;
+    const snapshotsAccordionBoxTop = this.snapshotsAccordionBox.top; // save the original position
+    valuesAccordionBox.visibleProperty.link( visible => {
+      if ( visible ) {
+        // shift the Snapshots accordion box down
+        this.snapshotsAccordionBox.top = valuesAccordionBox.bottom + 10;
+      }
+      else {
+        this.snapshotsAccordionBox.top = snapshotsAccordionBoxTop;
+      }
+    } );
   }
 
   public override dispose(): void {
