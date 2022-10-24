@@ -74,7 +74,7 @@ export default class LabSceneNode extends BasicsSceneNode {
       fixedWidth: this.snapshotsAccordionBox.width + 40, // wider so that pickers are usable size, see #3
       right: this.snapshotsAccordionBox.right,
       top: this.snapshotsAccordionBox.top,
-      tandem: options.tandem.createTandem( 'variablesAccordionBox' )
+      tandem: options.tandem.createTandem( 'valuesAccordionBox' )
     } );
     this.addChild( valuesAccordionBox );
     valuesAccordionBox.moveToBack();
