@@ -36,7 +36,7 @@ export default class LabScene extends BasicsScene {
         shadow: sphereShadow_png,
         value: 1,
         range: VARIABLE_RANGE,
-        tandem: variablesTandem.createTandem( 'sphereVariable' )
+        tandem: variablesTandem.createTandem( 'sphere' )
       } ),
 
       // square
@@ -46,7 +46,7 @@ export default class LabScene extends BasicsScene {
         shadow: squareShadow_png,
         value: 2,
         range: VARIABLE_RANGE,
-        tandem: variablesTandem.createTandem( 'squareVariable' )
+        tandem: variablesTandem.createTandem( 'square' )
       } ),
 
       // triangle
@@ -56,7 +56,7 @@ export default class LabScene extends BasicsScene {
         shadow: triangleShadow_png,
         value: 3,
         range: VARIABLE_RANGE,
-        tandem: variablesTandem.createTandem( 'triangleVariable' )
+        tandem: variablesTandem.createTandem( 'triangle' )
       } )
     ];
 
