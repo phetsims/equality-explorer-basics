@@ -31,7 +31,6 @@ export default class LabScene extends BasicsScene {
 
       // sphere
       new ObjectVariable( {
-        symbol: 'sphere',
         image: sphere_png,
         shadow: sphereShadow_png,
         value: 1,
@@ -41,7 +40,6 @@ export default class LabScene extends BasicsScene {
 
       // square
       new ObjectVariable( {
-        symbol: 'square',
         image: square_png,
         shadow: squareShadow_png,
         value: 2,
@@ -51,7 +49,6 @@ export default class LabScene extends BasicsScene {
 
       // triangle
       new ObjectVariable( {
-        symbol: 'triangle',
         image: triangle_png,
         shadow: triangleShadow_png,
         value: 3,
