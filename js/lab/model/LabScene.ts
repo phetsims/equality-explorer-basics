@@ -6,7 +6,6 @@
  * @author Chris Malley (PixelZoom, Inc.)
  */
 
-import Range from '../../../../dot/js/Range.js';
 import sphere_png from '../../../../equality-explorer/images/sphere_png.js';
 import sphereShadow_png from '../../../../equality-explorer/images/sphereShadow_png.js';
 import square_png from '../../../../equality-explorer/images/square_png.js';
@@ -17,9 +16,6 @@ import triangle_png from '../../../images/triangle_png.js';
 import triangleShadow_png from '../../../images/triangleShadow_png.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-
-// constants
-const VARIABLE_RANGE = new Range( 1, 20 );
 
 export default class LabScene extends BasicsScene {
 
@@ -34,7 +30,6 @@ export default class LabScene extends BasicsScene {
         image: sphere_png,
         shadow: sphereShadow_png,
         value: 1,
-        range: VARIABLE_RANGE,
         tandem: variablesTandem.createTandem( 'sphere' )
       } ),
 
@@ -43,7 +38,6 @@ export default class LabScene extends BasicsScene {
         image: square_png,
         shadow: squareShadow_png,
         value: 2,
-        range: VARIABLE_RANGE,
         tandem: variablesTandem.createTandem( 'square' )
       } ),
 
@@ -52,7 +46,6 @@ export default class LabScene extends BasicsScene {
         image: triangle_png,
         shadow: triangleShadow_png,
         value: 3,
-        range: VARIABLE_RANGE,
         tandem: variablesTandem.createTandem( 'triangle' )
       } )
     ];
