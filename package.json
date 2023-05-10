@@ -25,6 +25,10 @@
     "supportedBrands": [
       "phet",
       "adapted-from-phet"
+    ],
+    "screenNameKeys": [
+      "EQUALITY_EXPLORER/screen.basics",
+      "EQUALITY_EXPLORER_BASICS/screen.lab"
     ]
   }
 }
