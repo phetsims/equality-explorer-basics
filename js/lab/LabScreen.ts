@@ -23,9 +23,6 @@ import EqualityExplorerBasicsStrings from '../EqualityExplorerBasicsStrings.js';
 import LabModel from './model/LabModel.js';
 import LabScreenView from './view/LabScreenView.js';
 
-// constants
-const BACKGROUND_COLOR = EqualityExplorerColors.BASICS_SCREEN_BACKGROUND;
-
 type SelfOptions = EmptySelfOptions;
 
 type LabScreenOptions = SelfOptions & PickRequired<EqualityExplorerScreenOptions, 'tandem'>;
@@ -38,7 +35,7 @@ export default class LabScreen extends EqualityExplorerScreen<LabModel, LabScree
 
       // EqualityExplorerScreenOptions
       name: EqualityExplorerBasicsStrings.screen.labStringProperty,
-      backgroundColorProperty: new Property( BACKGROUND_COLOR ),
+      backgroundColorProperty: EqualityExplorerColors.labScreenBackgroundColorProperty,
       homeScreenIcon: createScreenIcon()
     }, providedOptions );
 
@@ -74,7 +71,7 @@ function createScreenIcon(): ScreenIcon {
 
   return new ScreenIcon( iconNode, {
     maxIconWidthProportion: 0.8,
-    fill: BACKGROUND_COLOR
+    fill: EqualityExplorerColors.labScreenBackgroundColorProperty
   } );
 }
 
