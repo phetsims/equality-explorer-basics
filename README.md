@@ -1,16 +1,15 @@
 Equality Explorer: Basics
 =============
-"Equality Explorer: Basics" is an educational simulation in HTML5,
-by <a href="https://phet.colorado.edu/" target="_blank">PhET Interactive Simulations</a>
+"Equality Explorer: Basics" is an educational simulation in HTML5, by <a href="https://phet.colorado.edu/" target="_blank">PhET
+Interactive Simulations</a>
 at the University of Colorado Boulder. For a description of this simulation, associated resources, and a link to the
 published version,
-<a href="https://phet.colorado.edu/en/simulation/equality-explorer-basics" target="_blank">visit the simulation's web
-page</a>.
+<a href="https://phet.colorado.edu/en/simulation/equality-explorer-basics" target="_blank">visit the simulation's web page</a>.
 
 ### Try it!
 
-<a href="https://phet.colorado.edu/sims/html/equality-explorer-basics/latest/equality-explorer-basics_en.html" target="_blank">
-Click here to run "Equality Explorer: Basics".</a>
+<a href="https://phet.colorado.edu/sims/html/equality-explorer-basics/latest/equality-explorer-basics_en.html" target="_blank">Click here to
+run "Equality Explorer: Basics".</a>
 
 <a href="https://phet.colorado.edu/sims/html/equality-explorer-basics/latest/equality-explorer-basics_en.html" target="_blank">
 <img src="https://raw.githubusercontent.com/phetsims/equality-explorer-basics/main/assets/equality-explorer-basics-screenshot.png" alt="Screenshot" style="width: 400px;"/>
@@ -71,8 +70,8 @@ new or changed files.
 
 (4) In a new terminal/command prompt, start an http-server
 
-(5) Open in the browser: `http://localhost/equality-explorer-basics/equality-explorer-basics_en.html` (You will probably
-need to modify this URL based on your HTTP port and relative path.)
+(5) Open in the browser: `http://localhost/equality-explorer-basics/equality-explorer-basics_en.html` (You will probably need to modify this
+URL based on your HTTP port and relative path.)
 
 #### Optional: Build the simulation into a single file
 
@@ -83,8 +82,8 @@ like `>> WARNING404: Skipping potentially non-public dependency`, which indicate
 being included in the build.
 
 (3) Open in the
-browser: `http://localhost/equality-explorer-basics/build/adapted-from-phet/equality-explorer-basics_en_adapted-from-phet.html` (
-You will probably need to modify this URL based on your HTTP port and relative path.)
+browser: `http://localhost/equality-explorer-basics/build/adapted-from-phet/equality-explorer-basics_en_adapted-from-phet.html` (You will
+probably need to modify this URL based on your HTTP port and relative path.)
 
 ### Get Involved
 
@@ -92,8 +91,7 @@ Contact us at our Google
 Group: <a href="http://groups.google.com/forum/#!forum/developing-interactive-simulations-in-html5" target="_blank">
 Developing Interactive Simulations in HTML5</a>
 
-Help us improve, create a <a href="http://github.com/phetsims/equality-explorer-basics/issues/new" target="_blank">New
-Issue</a>
+Help us improve, create a <a href="http://github.com/phetsims/equality-explorer-basics/issues/new" target="_blank">New Issue</a>
 
 ### License
 
