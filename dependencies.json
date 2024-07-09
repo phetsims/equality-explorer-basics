@@ -25,7 +25,7 @@
     "branch": "HEAD"
   },
   "equality-explorer-basics": {
-    "sha": "0afbd654e56efc04b6e87748866359cc2dbfa8af",
+    "sha": "d219336a3f8b014764701342c2732cb5563d6365",
     "branch": "1.0"
   },
   "joist": {
@@ -61,7 +61,7 @@
     "branch": "HEAD"
   },
   "scenery": {
-    "sha": "49986736a00d953ee5006b4a7bd36e80603705d0",
+    "sha": "53edc3c3f78316afaca3f708a39e884f2642e80e",
     "branch": "HEAD"
   },
   "scenery-phet": {
