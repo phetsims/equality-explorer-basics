@@ -12,10 +12,10 @@ import square_png from '../../../../equality-explorer/images/square_png.js';
 import squareShadow_png from '../../../../equality-explorer/images/squareShadow_png.js';
 import BasicsScene from '../../../../equality-explorer/js/basics/model/BasicsScene.js';
 import ObjectVariable from '../../../../equality-explorer/js/common/model/ObjectVariable.js';
+import Tandem from '../../../../tandem/js/Tandem.js';
 import triangle_png from '../../../images/triangle_png.js';
 import triangleShadow_png from '../../../images/triangleShadow_png.js';
 import equalityExplorerBasics from '../../equalityExplorerBasics.js';
-import Tandem from '../../../../tandem/js/Tandem.js';
 
 export default class LabScene extends BasicsScene {
 

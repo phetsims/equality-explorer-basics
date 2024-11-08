@@ -7,8 +7,8 @@
  * @author Chris Malley (PixelZoom, Inc.)
  */
 
-import Disposable from '../../../../axon/js/Disposable.js';
 import BooleanProperty from '../../../../axon/js/BooleanProperty.js';
+import Disposable from '../../../../axon/js/Disposable.js';
 import Property from '../../../../axon/js/Property.js';
 import Bounds2 from '../../../../dot/js/Bounds2.js';
 import BasicsSceneNode, { BasicsSceneNodeOptions } from '../../../../equality-explorer/js/basics/view/BasicsSceneNode.js';

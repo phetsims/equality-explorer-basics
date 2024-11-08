@@ -6,14 +6,14 @@
  * @author Chris Malley (PixelZoom, Inc.)
  */
 
-import EqualityExplorerScreenView from '../../../../equality-explorer/js/common/view/EqualityExplorerScreenView.js';
-import equalityExplorerBasics from '../../equalityExplorerBasics.js';
-import LabSceneNode, { LabSceneNodeOptions } from './LabSceneNode.js';
 import Property from '../../../../axon/js/Property.js';
-import EqualityExplorerScene from '../../../../equality-explorer/js/common/model/EqualityExplorerScene.js';
 import Bounds2 from '../../../../dot/js/Bounds2.js';
-import LabModel from '../model/LabModel.js';
+import EqualityExplorerScene from '../../../../equality-explorer/js/common/model/EqualityExplorerScene.js';
+import EqualityExplorerScreenView from '../../../../equality-explorer/js/common/view/EqualityExplorerScreenView.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
+import equalityExplorerBasics from '../../equalityExplorerBasics.js';
+import LabModel from '../model/LabModel.js';
+import LabSceneNode, { LabSceneNodeOptions } from './LabSceneNode.js';
 
 export default class LabScreenView extends EqualityExplorerScreenView {
 
