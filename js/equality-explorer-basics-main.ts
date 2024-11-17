@@ -1,4 +1,4 @@
-// Copyright 2018-2022, University of Colorado Boulder
+// Copyright 2018-2024, University of Colorado Boulder
 
 /**
  * Main entry point for the sim.
@@ -16,12 +16,14 @@ import LabScreen from './lab/LabScreen.js';
 
 simLauncher.launch( () => {
 
+  const titleStringProperty = EqualityExplorerBasicsStrings[ 'equality-explorer-basics' ].titleStringProperty;
+
   const screens = [
     new BasicsScreen( { tandem: Tandem.ROOT.createTandem( 'basicsScreen' ) } ),
     new LabScreen( { tandem: Tandem.ROOT.createTandem( 'labScreen' ) } )
   ];
 
-  const sim = new Sim( EqualityExplorerBasicsStrings[ 'equality-explorer-basics' ].titleStringProperty, screens, {
+  const sim = new Sim( titleStringProperty, screens, {
     credits: EqualityExplorerConstants.CREDITS
   } );
 
