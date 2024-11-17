@@ -29,6 +29,7 @@
     "supportsOutputJS": true,
     "simFeatures": {
       "supportsDynamicLocale": true,
+      "supportsSound": true,
       "colorProfiles": [
         "default"
       ]
