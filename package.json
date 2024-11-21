@@ -22,9 +22,7 @@
       "validation": false
     },
     "supportedBrands": [
-      "phet",
-      "phet-io",
-      "adapted-from-phet"
+      "phet"
     ],
     "supportsOutputJS": true,
     "simFeatures": {
