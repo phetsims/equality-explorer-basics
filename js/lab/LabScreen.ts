@@ -16,7 +16,9 @@ import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js'
 import PickRequired from '../../../phet-core/js/types/PickRequired.js';
 import MathSymbols from '../../../scenery-phet/js/MathSymbols.js';
 import PhetFont from '../../../scenery-phet/js/PhetFont.js';
-import { HBox, Image, Text } from '../../../scenery/js/imports.js';
+import HBox from '../../../scenery/js/layout/nodes/HBox.js';
+import Image from '../../../scenery/js/nodes/Image.js';
+import Text from '../../../scenery/js/nodes/Text.js';
 import NumberPicker from '../../../sun/js/NumberPicker.js';
 import equalityExplorerBasics from '../equalityExplorerBasics.js';
 import EqualityExplorerBasicsStrings from '../EqualityExplorerBasicsStrings.js';
