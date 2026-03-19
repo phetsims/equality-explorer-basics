@@ -9,7 +9,7 @@
     "branch": "HEAD"
   },
   "brand": {
-    "sha": "c9b3d8c35c060cad6c4ebcd290374d8054aa9530",
+    "sha": "a4bb58fab9b02df053d4fcac2a182539db4ce467",
     "branch": "HEAD"
   },
   "chipper": {
@@ -25,7 +25,7 @@
     "branch": "HEAD"
   },
   "equality-explorer-basics": {
-    "sha": "ce8bba1e619a04db657538d7978f082026d7cb5a",
+    "sha": "86ecfe6ef0299e2ff3f3f975bef6951f12279343",
     "branch": "1.2"
   },
   "joist": {
