@@ -15,7 +15,6 @@ import BasicsSceneNode, { BasicsSceneNodeOptions } from '../../../../equality-ex
 import VariablesAccordionBox from '../../../../equality-explorer/js/common/view/VariablesAccordionBox.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 import StrictOmit from '../../../../phet-core/js/types/StrictOmit.js';
-import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 import EqualityExplorerBasicsStrings from '../../EqualityExplorerBasicsStrings.js';
 import LabScene from '../model/LabScene.js';
 
@@ -100,5 +99,3 @@ export default class LabSceneNode extends BasicsSceneNode {
     super.reset();
   }
 }
-
-equalityExplorerBasics.register( 'LabSceneNode', LabSceneNode );

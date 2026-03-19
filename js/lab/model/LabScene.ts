@@ -15,7 +15,6 @@ import ObjectVariable from '../../../../equality-explorer/js/common/model/Object
 import Tandem from '../../../../tandem/js/Tandem.js';
 import triangle_png from '../../../images/triangle_png.js';
 import triangleShadow_png from '../../../images/triangleShadow_png.js';
-import equalityExplorerBasics from '../../equalityExplorerBasics.js';
 
 export default class LabScene extends BasicsScene {
 
@@ -56,5 +55,3 @@ export default class LabScene extends BasicsScene {
     } );
   }
 }
-
-equalityExplorerBasics.register( 'LabScene', LabScene );

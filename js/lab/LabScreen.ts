@@ -20,7 +20,6 @@ import HBox from '../../../scenery/js/layout/nodes/HBox.js';
 import Image from '../../../scenery/js/nodes/Image.js';
 import Text from '../../../scenery/js/nodes/Text.js';
 import NumberPicker from '../../../sun/js/NumberPicker.js';
-import equalityExplorerBasics from '../equalityExplorerBasics.js';
 import EqualityExplorerBasicsStrings from '../EqualityExplorerBasicsStrings.js';
 import LabModel from './model/LabModel.js';
 import LabScreenView from './view/LabScreenView.js';
@@ -76,5 +75,3 @@ function createScreenIcon(): ScreenIcon {
     fill: EqualityExplorerColors.labScreenBackgroundColorProperty
   } );
 }
-
-equalityExplorerBasics.register( 'LabScreen', LabScreen );
