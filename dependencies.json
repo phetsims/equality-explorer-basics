@@ -25,11 +25,11 @@
     "branch": "HEAD"
   },
   "equality-explorer-basics": {
-    "sha": "05b4ec3215b5b511ccdbce2da12fffc284590537",
+    "sha": "ce8bba1e619a04db657538d7978f082026d7cb5a",
     "branch": "1.2"
   },
   "joist": {
-    "sha": "a3ebcc67d1a8b549ff57f82f4d1b47d49b2b36d4",
+    "sha": "81f49fab83df8a7fa32791a6e271831ece729d9f",
     "branch": "HEAD"
   },
   "kite": {
