@@ -23,4 +23,6 @@ type StringsType = {
 
 const EqualityExplorerBasicsStrings = getStringModule( 'EQUALITY_EXPLORER_BASICS' ) as StringsType;
 
+equalityExplorerBasics.register( 'EqualityExplorerBasicsStrings', EqualityExplorerBasicsStrings );
+
 export default EqualityExplorerBasicsStrings;
